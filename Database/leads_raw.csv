@@ -1,0 +1,475 @@
+full_name,email,phone,source,service_interest,created_date,last_contact,last_stage,lost_reason,est_value,notes,timezone
+Marcus Ramirez,  MARCUS.RAMIREZ41@EXAMPLE.COM ,+1 949 555 0141,Google Ads,Lip Filler,2024-12-21,2024-12-25,consult_booked,no response,600,Wants natural look,America/Chicago
+ETHAN PATEL,ethan.patel65@example.com,555-01,Referral,Microneedling,"Nov 09, 2024","Dec 16, 2024",lost,no response,$450,,America/Denver
+Charlotte Carter,charlotte.carter91@example.com,786-555-0133,Google Ads,Dermal Fillers,"Dec 28, 2025",2026-01-02,quote_sent,,"$3,200",Interested in package deal,America/Chicago
+JORDAN EVANS,jordan.evans51@example.com,1.305.555.0149,Groupon,Microneedling,2026-04-04,04/25/2026,no_show,,"$1,500",Interested in package deal,America/New_York
+Amelia Yoder,amelia.yoder84@example.com,+1 702 555 0116,Referral,Body Contouring,"Aug 07, 2026",,new,,800.00,Wants natural look,America/New_York
+Victoria Stewart,victoria.stewart83@example.com,1.702.555.0108,Instagram DM,Microneedling,2026-08-22,"Sep 01, 2026",lost,after the holidays,1500.00,,America/Chicago
+elena ortiz,elena.ortiz6@example.com,1.212.555.0160,Groupon,PRP Facial,2024-09-05,2024-09-13,new,,$800,,America/Los_Angeles
+Victoria Bennett,victoria.bennett81@example.com,+1 949 555 0101,Instagram DM,Laser Hair Removal,2026-07-27,"Aug 10, 2026",no_show,,2400.00,Referred by a friend,America/Denver
+Noah Morgan,noah.morgan61@example.com,+1 312 555 0119,Referral,Lip Filler,2026-05-10,2026-05-17,quote_sent,,3200.00,,America/New_York
+ETHAN PERRY,ethan.perry41@example.com,+1 818 555 0168,Website Form,Lip Filler,"Mar 28, 2026",2026-04-08,lost,too pricey,3200,First-timer,America/Chicago
+camila delgado,camila.delgado66@example.com,(917) 555-0162,Groupon,Body Contouring,"Jul 26, 2026",2026-08-14,no_show,,3200,,America/Chicago
+Diego Sanders,diego.sanders33@example.com,1.646.555.0114,Google Ads,Lip Filler,"Feb 13, 2026",,new,,"$1,200",Prefers afternoons,America/Los_Angeles
+Diego Thompson,diego.thompson9@example.com,(718) 555-0135,Groupon,Skin Tightening,02/13/2026,03/01/2026,quote_sent,,1500.00,Interested in package deal,America/Chicago
+Andre Young,andre.young55@example.com,1.702.555.0140,Walk-in,Body Contouring,2026-07-16,"Aug 05, 2026",quote_sent,,800.00,Asked about downtime,America/Los_Angeles
+Owen Vargas,owen.vargas90@example.com,718-555-0112,Groupon,Botox,"Nov 17, 2024","Nov 21, 2024",lost,no response,"$1,200",First-timer,America/Los_Angeles
+Kevin Johnson,kevin.johnson25@example.com,7135550158,Walk-in,Laser Hair Removal,02/13/2026,2026-02-23,lost,after the holidays,$800,,America/Los_Angeles
+Alicia Brooks,alicia.brooks62@example.com,+1 702 555 0110,Instagram DM,Botox,11/24/2025,2025-12-11,quote_sent,,600,Nervous about needles,America/Denver
+Priya Turner,priya.turner51@example.com,(786) 555-0102,Walk-in,Lip Filler,04/27/2026,"May 06, 2026",lost,too pricey,"$3,200",Nervous about needles,America/New_York
+Abigail Zhang,abigail.zhang34@example.com,,Groupon,Lip Filler,2025-12-07,2025-12-20,lost,Found cheaper elsewhere,"$1,200",,America/New_York
+CHLOE FISHER,  CHLOE.FISHER97@EXAMPLE.COM ,+1 617 555 0160,Groupon,Lip Filler,02/15/2026,"Mar 11, 2026",lost,cost,800,Prefers afternoons,America/Los_Angeles
+Victoria Underwood,victoria.underwood83@example.com,4045550131,Groupon,Body Contouring,2026-04-18,"May 10, 2026",no_show,,450.00,First-timer,America/Los_Angeles
+Abigail Valdez,abigail.valdez42@example.com,+17025550158,Website Form,Body Contouring,06/17/2025,"Jul 16, 2025",lost,,300.00,Referred by a friend,America/New_York
+Lily Foster,lily.foster15@example.com,6465550132,Website Form,PRP Facial,01/07/2026,,new,,2400.00,,America/Los_Angeles
+Andre Young,andre.young45@example.com,+15035550131,Facebook Lead Ad,HydraFacial,2026-04-09,2026-04-18,lost,cost,$600,,America/Los_Angeles
+Scarlett Hughes,scarlett.hughes62@example.com,,Groupon,Laser Hair Removal,"Apr 08, 2025","May 02, 2025",new,went quiet,$450,,America/New_York
+Ryan Evans,ryan.evans93@example.com,(702) 555-0132,Google Ads,Chemical Peel,"Jul 15, 2026",07/29/2026,quote_sent,,$300,Interested in package deal,America/Los_Angeles
+Henry Lawson,henry.lawson13@example.com,1.713.555.0141,Website Form,Chemical Peel,07/03/2026,2026-07-14,no_show,,3200,Nervous about needles,America/New_York
+naomi hayes,naomi.hayes12@example.com,(718) 555-0113,Groupon,Dermal Fillers,"Nov 18, 2025","Nov 23, 2025",lost,wedding in spring,"$1,500",First-timer,America/Los_Angeles
+Ethan Lopez,ethan.lopez63@example.com,(213) 555-0125,Walk-in,PRP Facial,08/08/2026,,new,,$800,,America/Chicago
+monica iverson,monica.iverson39@example.com,+17135550157,Walk-in,HydraFacial,03/05/2026,"Mar 25, 2026",quote_sent,,"$2,400",First-timer,America/New_York
+Sophia Morgan,SOPHIA.MORGAN73@EXAMPLE.COM,7135550114,Facebook Lead Ad,PRP Facial,2026-05-13,"Jun 01, 2026",quote_sent,,"$3,200",Asked about downtime,America/New_York
+ava murphy,not-an-email,+15035550121,Groupon,Lip Filler,06/10/2026,,new,,3200,Prefers afternoons,America/Los_Angeles
+Maya Walker,maya.walker37@example.com,8585550192,Walk-in,Dermal Fillers,02/10/2026,02/27/2026,no_show,,450.00,Nervous about needles,America/Chicago
+Carlos Yoder,carlos.yoder67@example.com,1.213.555.0195,Facebook Lead Ad,HydraFacial,"Apr 01, 2026",04/18/2026,quote_sent,,450,Wants natural look,America/New_York
+Elijah Castillo,  ELIJAH.CASTILLO79@EXAMPLE.COM ,1.858.555.0198,Groupon,Laser Hair Removal,"Apr 14, 2026","Apr 17, 2026",lost,bad timing,300,Wants natural look,America/New_York
+Ryan Murphy,ryan.murphy74@example.com,602-555-0157,Groupon,Laser Hair Removal,05/03/2026,2026-06-01,lost,Too expensive,$600,Wants natural look,America/Denver
+Jack Delgado,jack.delgado12@example.com,+1 949 555 0134,Groupon,Lip Filler,03/01/2026,"Mar 11, 2026",no_show,,"$1,500",,America/New_York
+James Delgado,james.delgado75@example.com,818-555-0145,Groupon,Lip Filler,02/01/2026,,new,,300,Referred by a friend,America/Denver
+Sophia Ortiz,sophia.ortiz64@example.com,(305) 555-0119,Instagram DM,Botox,02/09/2025,03/07/2025,lost,no response,$800,Nervous about needles,America/Los_Angeles
+Devon Walker,devon.walker30@example.com,1.858.555.0152,Instagram DM,Lip Filler,03/13/2026,,new,,$300,Referred by a friend,America/Denver
+Mason Vargas,mason.vargas88@example.com,+1 212 555 0136,Website Form,PRP Facial,"Jan 14, 2025",2025-02-06,new,no response,450,Do not call,America/New_York
+Charlotte Underwood,charlotte.underwood46@example.com,(720) 555-0179,Google Ads,Lip Filler,01/22/2026,,new,,300.00,,America/Los_Angeles
+Monica Foster,monica.foster42@example.com,1.415.555.0107,Google Ads,Dermal Fillers,2026-07-26,2026-07-29,quote_sent,,$600,Wants natural look,America/Los_Angeles
+James Delgado,james.delgado60@example.com,7135550138,Walk-in,Lip Filler,2026-01-04,"Jan 15, 2026",quote_sent,,600.00,First-timer,America/New_York
+Jack Thompson,jack.thompson23@example.com,+1 404 555 0190,Referral,Body Contouring,06/05/2025,2025-06-27,consult_booked,went quiet,1500.00,First-timer,America/New_York
+Amelia Ellis,amelia.ellis63@example.com,+1 312 555 0133,Groupon,Body Contouring,"Feb 06, 2026","Mar 02, 2026",no_show,,"$1,500",Prefers afternoons,America/New_York
+Camila Ortiz,camila.ortiz87@example.com,+13055550168,Website Form,Microneedling,2025-12-09,"Dec 24, 2025",lost,bad timing,450,Interested in package deal,America/Chicago
+Harper Valdez,harper.valdez14@example.com,6465550152,Groupon,HydraFacial,12/28/2024,"Feb 03, 2025",lost,no response,600.00,Referred by a friend,America/Los_Angeles
+Jasmine Ellis,jasmine.ellis14@example.com,+17025550111,Website Form,Laser Hair Removal,2025-12-28,"Jan 17, 2026",quote_sent,,800.00,Prefers afternoons,America/New_York
+Scarlett Watson,,,Website Form,Microneedling,05/24/2026,,new,,300,Interested in package deal,America/Los_Angeles
+Jack Thompson,jack.thompson39@example.com,+1 702 555 0145,Groupon,Botox,"Jan 14, 2026",,new,,800,Wants natural look,America/New_York
+Carlos Underwood,carlos.underwood56@example.com,+17135550151,Instagram DM,Body Contouring,"May 27, 2026",2026-06-16,no_show,,$800,,America/New_York
+VICTORIA UNDERWOOD,victoria.underwood88@example.com,602-555-0147,Referral,Botox,"Jul 20, 2026","Jul 27, 2026",no_show,,3200.00,,America/Chicago
+Hannah Ortiz,hannah.ortiz60@example.com,7205550137,Facebook Lead Ad,Dermal Fillers,2026-06-18,2026-06-25,quote_sent,,$300,,America/New_York
+camila fisher,camila.fisher2@example.com,+1 858 555 0196,Google Ads,Dermal Fillers,08/26/2024,09/17/2024,consult_booked,,450.00,First-timer,America/Chicago
+Tessa Gonzalez,jane@@gmail,(713) 555-0168,Instagram DM,Botox,2024-11-01,11/02/2024,consult_booked,went quiet,450,,America/New_York
+Brianna Ingram,BRIANNA.INGRAM76@EXAMPLE.COM,,Referral,HydraFacial,2026-04-06,2026-04-15,lost,Too expensive,1500.00,Prefers afternoons,America/Los_Angeles
+Elijah Delgado,elijah.delgado98@example.com,(917) 555-0135,Website Form,Chemical Peel,"Jan 24, 2026",02/06/2026,lost,Budget,$600,,America/Los_Angeles
+Brianna Kim,brianna.kim44@example.com,305-555-0146,Groupon,PRP Facial,"Mar 05, 2026",,new,,800,,America/Denver
+Elijah Zhang,elijah.zhang71@example.com,4045550102,Walk-in,Chemical Peel,03/30/2026,04/06/2026,lost,bad timing,2400.00,Nervous about needles,America/Los_Angeles
+Liam Lopez,liam.lopez42@example.com,+1 713 555 0177,Google Ads,Skin Tightening,03/01/2025,"Apr 09, 2025",new,,600,Referred by a friend,America/Los_Angeles
+Carlos Iverson,carlos.iverson89@example.com,+1 305 555 0161,Google Ads,Skin Tightening,"Dec 28, 2024","Feb 04, 2025",lost,no response,1200,Referred by a friend,America/Los_Angeles
+Brianna Perry,brianna.perry68@example.com,+1 212 555 0111,Referral,PRP Facial,2026-01-28,2026-02-12,quote_sent,,$800,Interested in package deal,America/New_York
+Jasmine Kim,jasmine.kim23@example.com,858-555-0136,Instagram DM,HydraFacial,"May 18, 2026","May 27, 2026",quote_sent,,$600,,America/Chicago
+diego hughes,diego.hughes36@example.com,+17135550105,Referral,Botox,"May 29, 2025","Jun 08, 2025",lost,,1200.00,Nervous about needles,America/Chicago
+Maya Nguyen,  MAYA.NGUYEN72@EXAMPLE.COM ,4695550168,Google Ads,Chemical Peel,"May 25, 2025",05/31/2025,quote_sent,,"$1,200",,America/New_York
+Liam Sanders,liam.sanders58@example.com,1.602.555.0130,Google Ads,HydraFacial,"Jan 31, 2026",02/20/2026,quote_sent,,800.00,Interested in package deal,America/Denver
+Devon Young,devon.young54@example.com,+1 818 555 0140,Groupon,Lip Filler,2025-05-19,"Jun 07, 2025",consult_booked,,2400,Referred by a friend,America/Denver
+Ava Zimmerman,ava.zimmerman62@example.com,312-555-0123,Referral,PRP Facial,2026-04-18,04/23/2026,no_show,,1500.00,Wants natural look,America/Chicago
+Scarlett Garcia,scarlett.garcia59@example.com,1.720.555.0112,Google Ads,Dermal Fillers,06/16/2026,"Jul 02, 2026",lost,busy at work,300.00,,America/Denver
+RYAN GONZALEZ,ryan.gonzalez99@example.com,(786) 555-0138,Referral,Microneedling,05/01/2026,,new,,"$2,400",First-timer,America/New_York
+james hughes,james.hughes63@example.com,1.602.555.0189,Website Form,Body Contouring,2026-04-16,,new,,800.00,,America/Los_Angeles
+monica jenkins,monica.jenkins19@example.com,9495550100,Instagram DM,PRP Facial,04/17/2026,2026-04-27,no_show,,$600,,America/Chicago
+Ethan Anderson,ethan.anderson40@example.com,+1 713 555 0125,Groupon,PRP Facial,"Oct 13, 2024",10/18/2024,new,,1500,Asked about downtime,America/Los_Angeles
+MIA JOHNSON,mia.johnson83@example.com,1.718.555.0127,Google Ads,Botox,02/13/2026,,new,,$450,Wants natural look,America/New_York
+Grace Foster,  GRACE.FOSTER69@EXAMPLE.COM ,7135550101,Instagram DM,Lip Filler,2026-01-08,"Jan 22, 2026",lost,busy at work,450.00,Wants natural look,America/Chicago
+Scarlett Nelson,scarlett.nelson35@example.com,+1 646 555 0103,Walk-in,Microneedling,2026-01-19,,new,,3200.00,Asked about downtime,America/Chicago
+Chloe Valdez,chloe.valdez75@example.com,+1 503 555 0139,Google Ads,Body Contouring,12/09/2025,12/28/2025,quote_sent,,"$1,500",Referred by a friend,America/New_York
+Harper Reyes,harper.reyes99@example.com,(718) 555-0165,Walk-in,Body Contouring,12/04/2024,12/12/2024,quote_sent,went quiet,300,,America/Los_Angeles
+Elena Mitchell,  ELENA.MITCHELL13@EXAMPLE.COM ,1.312.555.0113,Website Form,Microneedling,2025-11-27,"Dec 11, 2025",lost,after the holidays,1200.00,Wants natural look,America/Denver
+Sophia Owens,sophia.owens27@example.com,(858) 555-0165,Instagram DM,Dermal Fillers,12/20/2025,,new,,1500.00,Nervous about needles,America/Chicago
+Noah Anderson,NOAH.ANDERSON57@EXAMPLE.COM,1.602.555.0125,Google Ads,Laser Hair Removal,"Feb 21, 2026",2026-03-20,lost,wedding in spring,$800,Referred by a friend,America/New_York
+Andre Fisher,andre.fisher25@example.com,+1 602 555 0104,Google Ads,Microneedling,02/22/2026,2026-02-28,no_show,,1200,Nervous about needles,America/Los_Angeles
+Tyler Cooper,tyler.cooper19@example.com,6465550130,Walk-in,Microneedling,"Jan 29, 2026",02/10/2026,lost,traveling,$800,,America/Chicago
+Chloe Patel,chloe.patel1@example.com,+1 404 555 0183,Instagram DM,Lip Filler,"Jan 23, 2026","Feb 02, 2026",lost,price,450.00,Referred by a friend,America/Los_Angeles
+TYLER CASTILLO,tyler.castillo56@example.com,7025550193,Groupon,Skin Tightening,"Mar 14, 2026",,new,,450.00,First-timer,America/New_York
+OWEN BENNETT,owen.bennett82@example.com,+1 617 555 0156,Referral,PRP Facial,"Jun 07, 2026",2026-06-18,no_show,,1200.00,,America/New_York
+evelyn gonzalez,evelyn.gonzalez50@example.com,1.818.555.0196,Facebook Lead Ad,Body Contouring,"Apr 13, 2026","Apr 17, 2026",lost,traveling,450.00,Interested in package deal,America/New_York
+JASMINE OWENS,  JASMINE.OWENS87@EXAMPLE.COM ,+1 312 555 0143,Groupon,HydraFacial,"Jan 08, 2026",2026-01-27,lost,Budget,300.00,First-timer,America/Los_Angeles
+Lucas Thompson,not-an-email,713-555-0121,Website Form,Body Contouring,2026-04-13,"May 01, 2026",lost,price,1200.00,,America/Los_Angeles
+Monica Iverson,monica.iverson32@example.com,(469) 555-0125,Referral,Microneedling,"Feb 06, 2026",,new,,$300,,America/New_York
+Naomi Lopez,naomi.lopez28@example.com,7865550140,Instagram DM,HydraFacial,2026-06-26,,new,,"$1,200",Asked about downtime,America/Los_Angeles
+Grace Xu,grace.xu45@example.com,8585550171,Walk-in,Skin Tightening,2026-01-10,01/15/2026,quote_sent,,300,Nervous about needles,America/Chicago
+Elijah Zimmerman,elijah.zimmerman27@example.com,(949) 555-0107,Google Ads,Laser Hair Removal,2026-06-11,,new,,1200,,America/Los_Angeles
+Henry Gonzalez,henry.gonzalez63@example.com,+1 312 555 0172,Website Form,Body Contouring,12/03/2024,2025-01-07,quote_sent,went quiet,"$3,200",,America/Los_Angeles
+Naomi Anderson,  NAOMI.ANDERSON53@EXAMPLE.COM ,(212) 555-0108,Facebook Lead Ad,Botox,"Jul 01, 2026","Jul 20, 2026",no_show,,$450,Nervous about needles,America/Los_Angeles
+Logan Kim,logan.kim41@example.com,917-555-0107,Website Form,Botox,07/20/2026,,new,,3200,Nervous about needles,America/Los_Angeles
+Naomi Carter,naomi.carter39@example.com,713-555-0184,Instagram DM,Botox,"Jun 15, 2026","Jun 28, 2026",quote_sent,,"$2,400",Interested in package deal,America/Los_Angeles
+Mia Garcia,mia.garcia57@example.com,4155550127,Google Ads,Lip Filler,"Mar 31, 2026",2026-04-20,quote_sent,,2400,,America/New_York
+Olivia Xu,  OLIVIA.XU56@EXAMPLE.COM ,917-555-0170,Groupon,Skin Tightening,08/07/2026,"Aug 19, 2026",lost,traveling,600.00,,America/New_York
+Jasmine Morgan,jasmine.morgan39@example.com,720-555-0113,Groupon,PRP Facial,2026-02-07,02/20/2026,lost,wedding in spring,300,Prefers afternoons,America/Los_Angeles
+Marcus Thompson,marcus.thompson20@example.com,(646) 555-0145,Referral,Dermal Fillers,07/24/2026,"Aug 05, 2026",quote_sent,,1200,Prefers afternoons,America/New_York
+Aiden Cooper,aiden.cooper54@example.com,+1 646 555 0134,Instagram DM,Dermal Fillers,04/29/2025,"May 27, 2025",quote_sent,no response,450.00,Interested in package deal,America/Denver
+Amelia Perry,AMELIA.PERRY81@EXAMPLE.COM,,Referral,Chemical Peel,"Jun 22, 2026",2026-07-10,quote_sent,,"$1,200",,America/New_York
+AIDEN JOHNSON,  AIDEN.JOHNSON95@EXAMPLE.COM ,(469) 555-0154,Groupon,HydraFacial,2025-03-04,"Mar 06, 2025",consult_booked,no response,800.00,Nervous about needles,America/Chicago
+Brianna Perry,  BRIANNA.PERRY82@EXAMPLE.COM ,1.917.555.0155,Referral,Laser Hair Removal,02/07/2025,03/09/2025,quote_sent,,1200,Interested in package deal,America/Los_Angeles
+ISABELLA BROOKS,isabella.brooks18@example.com,602-555-0131,Referral,HydraFacial,"Aug 22, 2024","Sep 25, 2024",new,went quiet,450.00,Prefers afternoons,America/Los_Angeles
+ISABELLA WATSON,isabella.watson98@example.com,+1 404 555 0148,Groupon,Microneedling,"Jun 08, 2025","Jun 19, 2025",lost,no response,600,Interested in package deal,America/Chicago
+Charlotte Kim,charlotte.kim15@example.com,1.212.555.0162,Instagram DM,Dermal Fillers,04/30/2026,2026-05-26,lost,after the holidays,$450,First-timer,America/New_York
+Marcus Turner,marcus.turner39@example.com,(713) 555-0170,Groupon,Laser Hair Removal,"Apr 18, 2025",2025-05-15,lost,no response,1200,Interested in package deal,America/Los_Angeles
+Charlotte Kelly,charlotte.kelly53@example.com,(305) 555-0120,Walk-in,HydraFacial,12/11/2025,"Dec 22, 2025",quote_sent,,3200.00,,America/New_York
+Marcus Underwood,  MARCUS.UNDERWOOD83@EXAMPLE.COM ,8585550108,Website Form,HydraFacial,12/29/2025,01/04/2026,lost,Found cheaper elsewhere,2400,First-timer,America/New_York
+brianna nguyen,BRIANNA.NGUYEN55@EXAMPLE.COM,,Facebook Lead Ad,Body Contouring,08/26/2026,,new,,"$1,500",Referred by a friend,America/New_York
+Olivia Carter,olivia.carter51@example.com,1.213.555.0154,Instagram DM,Laser Hair Removal,07/09/2026,07/26/2026,lost,Found cheaper elsewhere,"$3,200",Asked about downtime,America/New_York
+TESSA SANDERS,tessa.sanders57@example.com,+1 404 555 0172,Website Form,Dermal Fillers,06/07/2025,2025-07-07,new,,1500.00,Referred by a friend,America/New_York
+Harper Bennett,harper.bennett90@example.com,1.713.555.0198,Groupon,Microneedling,"Mar 17, 2026",,new,,300.00,Do not call,America/Los_Angeles
+Isabella Brooks,isabella.brooks50@example.com,1.415.555.0163,Instagram DM,Dermal Fillers,2026-03-27,2026-04-06,quote_sent,,450,Interested in package deal,America/New_York
+Alicia Garcia,alicia.garcia1@example.com,(718) 555-0168,Walk-in,PRP Facial,"Jun 10, 2026",06/12/2026,quote_sent,,2400,,America/Los_Angeles
+Elijah Johnson,elijah.johnson2@example.com,+1 702 555 0181,Instagram DM,Microneedling,09/27/2026,,new,,"$1,500",Prefers afternoons,America/New_York
+henry jenkins,henry.jenkins26@example.com,(213) 555-0185,Instagram DM,Skin Tightening,2026-07-07,,new,,1200,Wants natural look,America/Los_Angeles
+Jasmine Delgado,  JASMINE.DELGADO73@EXAMPLE.COM ,+1 646 555 0193,Website Form,Laser Hair Removal,2025-04-17,04/20/2025,lost,no response,$600,,America/New_York
+Diego Gonzalez,,+17205550110,Facebook Lead Ad,Laser Hair Removal,12/09/2024,2025-01-18,quote_sent,,1200,Nervous about needles,America/Chicago
+Chloe Bennett,chloe.bennett1@example.com,1.213.555.0171,Groupon,Botox,2026-04-25,,new,,450,Referred by a friend,America/Chicago
+brianna nguyen,brianna.nguyen55@example.com,(917) 555-0109,Facebook Lead Ad,Body Contouring,08/26/2026,,new,,"$1,500",Referred by a friend,America/New_York
+Jordan Stewart,jordan.stewart58@example.com,617-555-0110,Referral,Body Contouring,2024-11-30,"Dec 10, 2024",quote_sent,no response,3200.00,First-timer,America/Chicago
+Maya Castillo,MAYA.CASTILLO20@EXAMPLE.COM,,Groupon,Microneedling,2025-12-03,12/20/2025,quote_sent,,"$3,200",,America/New_York
+Tyler Zhang,  TYLER.ZHANG34@EXAMPLE.COM ,1.617.555.0193,Google Ads,Dermal Fillers,2024-09-15,"Oct 15, 2024",quote_sent,went quiet,$300,,America/Chicago
+Hannah Mitchell,hannah.mitchell99@example.com,+1 617 555 0153,Facebook Lead Ad,PRP Facial,2025-05-31,"Jun 13, 2025",quote_sent,went quiet,3200,Wants natural look,America/Los_Angeles
+Jack Carter,jack.carter74@example.com,+1 404 555 0104,Walk-in,PRP Facial,"Feb 15, 2025","Feb 20, 2025",new,,"$1,200",Prefers afternoons,America/Los_Angeles
+Scarlett Zimmerman,scarlett.zimmerman49@example.com,+1 404 555 0111,Referral,Laser Hair Removal,2026-01-07,"Jan 16, 2026",quote_sent,,$800,First-timer,America/Los_Angeles
+Evelyn Lopez,evelyn.lopez74@example.com,+1 305 555 0194,Referral,Dermal Fillers,"Jun 06, 2025","Jul 13, 2025",consult_booked,no response,3200,Referred by a friend,America/Chicago
+SOPHIA THOMPSON,sophia.thompson97@example.com,1.312.555.0187,Referral,Laser Hair Removal,"Mar 07, 2026",2026-03-13,lost,traveling,1200.00,Prefers afternoons,America/Chicago
+Brianna Ingram,brianna.ingram76@example.com,+1 602 555 0122,Referral,HydraFacial,2026-04-06,2026-04-15,lost,Too expensive,1500.00,Prefers afternoons,America/Los_Angeles
+Tyler Mitchell,tyler.mitchell50@example.com,+13055550129,Facebook Lead Ad,Laser Hair Removal,07/04/2026,"Jul 07, 2026",lost,price,600.00,Referred by a friend,America/New_York
+Tessa Evans,tessa.evans20@example.com,+1 713 555 0191,Facebook Lead Ad,Laser Hair Removal,2026-02-27,2026-03-12,quote_sent,,2400,,America/Los_Angeles
+Diego Patel,  DIEGO.PATEL28@EXAMPLE.COM ,+16025550185,Google Ads,Chemical Peel,01/28/2026,,new,,600,Asked about downtime,America/Los_Angeles
+Emma Vargas,emma.vargas36@example.com,6025550181,Referral,Microneedling,"Mar 29, 2026",04/07/2026,lost,price,1200.00,Referred by a friend,America/New_York
+Ryan Yoder,ryan.yoder54@example.com,(213) 555-0120,Groupon,Laser Hair Removal,02/15/2026,,new,,3200,,America/New_York
+Hannah Kim,hannah.kim7@example.com,949-555-0155,Website Form,Body Contouring,2026-03-12,2026-03-21,lost,price,$450,Prefers afternoons,America/Denver
+Devon Young,devon.young43@example.com,+1 602 555 0119,Walk-in,Dermal Fillers,"Sep 26, 2026",,new,,"$2,400",Referred by a friend,America/New_York
+Evelyn Diaz,evelyn.diaz21@example.com,3125550159,Google Ads,PRP Facial,11/19/2024,12/08/2024,new,went quiet,2400.00,Wants natural look,America/Los_Angeles
+Brianna Stewart,brianna.stewart70@example.com,+1 305 555 0187,Google Ads,Chemical Peel,09/24/2024,09/27/2024,lost,went quiet,"$1,200",,America/New_York
+Priya Patel,priya.patel61@example.com,+1 469 555 0175,Referral,HydraFacial,2026-01-31,2026-02-17,lost,Not ready,"$3,200",First-timer,America/New_York
+Carlos Watson,carlos.watson52@example.com,+18185550137,Google Ads,Lip Filler,"Apr 20, 2026",,new,,"$1,200",Do not call,America/Los_Angeles
+Aiden Nelson,not-an-email,,Website Form,HydraFacial,"Feb 15, 2026",,new,,2400.00,Asked about downtime,America/Chicago
+TESSA JOHNSON,,(404) 555-0135,Website Form,Laser Hair Removal,2026-07-25,,new,,1200,Interested in package deal,America/Los_Angeles
+charlotte cooper,charlotte.cooper40@example.com,2135550153,Facebook Lead Ad,Lip Filler,03/14/2026,03/21/2026,quote_sent,,3200.00,,America/New_York
+Hannah Foster,hannah.foster50@example.com,1.949.555.0176,Google Ads,Skin Tightening,2025-12-18,,new,,"$3,200",,America/Los_Angeles
+MARCUS ELLIS,marcus.ellis24@example.com,+1 404 555 0140,Groupon,Laser Hair Removal,"Dec 22, 2025",2026-01-04,lost,cost,450,,America/New_York
+Scarlett Diaz,scarlett.diaz10@example.com,646-555-0166,Groupon,Dermal Fillers,2026-06-21,2026-07-07,quote_sent,,3200,First-timer,America/New_York
+Victoria Hughes,victoria.hughes72@example.com,(949) 555-0129,Instagram DM,Skin Tightening,"Dec 17, 2025","Dec 30, 2025",no_show,,$800,Nervous about needles,America/New_York
+Hannah Turner,hannah.turner2@example.com,(720) 555-0140,Instagram DM,Chemical Peel,09/19/2024,2024-10-25,new,,3200,Referred by a friend,America/Los_Angeles
+Ava Valdez,ava.valdez44@example.com,(305) 555-0139,Website Form,Botox,"Aug 18, 2026",09/07/2026,lost,traveling,600.00,,America/New_York
+Grace Anderson,grace.anderson40@example.com,6175550144,Walk-in,Microneedling,"Jul 10, 2026",07/21/2026,no_show,,"$3,200",Interested in package deal,America/Los_Angeles
+CHLOE LAWSON,  CHLOE.LAWSON93@EXAMPLE.COM ,(469) 555-0193,Groupon,PRP Facial,12/24/2025,2026-01-01,lost,after the holidays,"$1,500",First-timer,America/Chicago
+ABIGAIL MORGAN,  ABIGAIL.MORGAN85@EXAMPLE.COM ,(312) 555-0158,Groupon,Skin Tightening,2026-08-13,"Aug 19, 2026",no_show,,$800,Nervous about needles,America/New_York
+Grace Brooks,grace.brooks28@example.com,702-555-0139,Referral,Skin Tightening,2025-12-23,"Jan 01, 2026",lost,price,1500,,America/Los_Angeles
+Olivia Murphy,olivia.murphy3@example.com,212-555-0131,Instagram DM,PRP Facial,"Apr 03, 2025","Apr 11, 2025",consult_booked,went quiet,600.00,,America/New_York
+KEVIN NELSON,  KEVIN.NELSON29@EXAMPLE.COM ,(917) 555-0164,Google Ads,Body Contouring,2026-04-02,04/30/2026,lost,Found cheaper elsewhere,2400.00,,America/Denver
+Alicia Morgan,alicia.morgan91@example.com,+1 404 555 0139,Facebook Lead Ad,Laser Hair Removal,01/20/2026,2026-02-16,lost,bad timing,600.00,First-timer,America/New_York
+Ava Kelly,ava.kelly26@example.com,7205550101,Instagram DM,Skin Tightening,2026-03-21,2026-04-14,no_show,,"$1,200",Asked about downtime,America/Denver
+Camila Thompson,  CAMILA.THOMPSON19@EXAMPLE.COM ,+17025550103,Groupon,Botox,"Dec 07, 2025","Dec 12, 2025",lost,Too expensive,$300,Nervous about needles,America/Los_Angeles
+Aiden Kim,AIDEN.KIM78@EXAMPLE.COM,4155550120,Instagram DM,PRP Facial,2026-06-02,,new,,450.00,Prefers afternoons,America/Denver
+Owen Sanders,owen.sanders61@example.com,(718) 555-0124,Facebook Lead Ad,Laser Hair Removal,05/29/2026,06/01/2026,lost,busy at work,1500.00,Interested in package deal,America/Los_Angeles
+HANNAH INGRAM,hannah.ingram59@example.com,+1 786 555 0119,Walk-in,Chemical Peel,"Feb 03, 2026",,new,,1500.00,Prefers afternoons,America/New_York
+DANIEL PATEL,daniel.patel35@example.com,7185550192,Facebook Lead Ad,Microneedling,2026-01-30,02/04/2026,quote_sent,,450,Referred by a friend,America/Chicago
+mason iverson,mason.iverson89@example.com,213-555-0129,Website Form,Botox,2026-04-12,"Apr 16, 2026",lost,Not ready,"$3,200",Wants natural look,America/Denver
+Hannah Cooper,hannah.cooper27@example.com,555-01,Instagram DM,Microneedling,09/12/2026,,new,,2400,Interested in package deal,America/New_York
+kevin johnson,kevin.johnson88@example.com,469-555-0197,Referral,HydraFacial,"Dec 02, 2025","Dec 19, 2025",lost,too pricey,$450,Nervous about needles,America/New_York
+Maya Stewart,maya.stewart59@example.com,+1 617 555 0120,Website Form,Lip Filler,"Feb 07, 2026",,new,,300.00,Interested in package deal,America/New_York
+elijah valdez,ELIJAH.VALDEZ95@EXAMPLE.COM,+14695550130,Website Form,Lip Filler,2025-01-23,"Feb 05, 2025",consult_booked,,1500.00,,America/Chicago
+Daniel Zimmerman,daniel.zimmerman73@example.com,602-555-0108,Instagram DM,Skin Tightening,"Jun 11, 2026",,new,,1500,Interested in package deal,America/Los_Angeles
+Hannah Murphy,hannah.murphy3@example.com,3055550104,Facebook Lead Ad,Chemical Peel,"Apr 17, 2026","Apr 23, 2026",lost,Not ready,1500,Nervous about needles,America/New_York
+Noah Nelson,noah.nelson84@example.com,(213) 555-0184,Walk-in,Botox,07/10/2025,07/17/2025,consult_booked,no response,300.00,Prefers afternoons,America/New_York
+Devon Kelly,devon.kelly43@example.com,469-555-0161,Walk-in,HydraFacial,07/27/2025,2025-08-09,quote_sent,went quiet,1200.00,,America/Chicago
+Ethan Hughes,ethan.hughes22@example.com,1.646.555.0136,Google Ads,HydraFacial,2026-04-09,04/25/2026,no_show,,450,Prefers afternoons,America/Denver
+CAMILA PERRY,camila.perry60@example.com,8185550110,Referral,Microneedling,07/19/2026,"Aug 16, 2026",lost,Found cheaper elsewhere,"$2,400",Wants natural look,America/Los_Angeles
+Tessa Stewart,tessa.stewart44@example.com,(713) 555-0175,Website Form,Laser Hair Removal,"Mar 11, 2026","Mar 20, 2026",no_show,,1200.00,,America/Los_Angeles
+Lucas Xu,lucas.xu74@example.com,(415) 555-0132,Google Ads,Laser Hair Removal,2026-05-04,2026-05-30,lost,wedding in spring,450.00,,America/Denver
+Noah Anderson,noah.anderson57@example.com,1.602.555.0125,Google Ads,Laser Hair Removal,"Feb 21, 2026",2026-03-20,lost,wedding in spring,$800,Referred by a friend,America/New_York
+Andre Brooks,andre.brooks92@example.com,818-555-0173,Referral,Chemical Peel,2026-04-01,"Apr 17, 2026",lost,Not ready,600.00,First-timer,America/Los_Angeles
+Tyler Foster,tyler.foster14@example.com,(646) 555-0159,Google Ads,Dermal Fillers,07/23/2025,2025-08-28,lost,went quiet,"$1,200",Asked about downtime,America/Chicago
+Maya Stewart,maya.stewart66@example.com,+19495550151,Facebook Lead Ad,Dermal Fillers,"Jun 09, 2026",2026-06-28,no_show,,"$1,200",,America/Los_Angeles
+Monica Mitchell,monica.mitchell32@example.com,(503) 555-0120,Google Ads,Chemical Peel,2026-04-09,2026-05-01,no_show,,$800,,America/Los_Angeles
+Elena Morgan,elena.morgan37@example.com,1.305.555.0111,Website Form,Laser Hair Removal,02/27/2026,"Mar 12, 2026",no_show,,"$1,500",Asked about downtime,America/Los_Angeles
+carlos lawson,carlos.lawson43@example.com,312-555-0163,Walk-in,Chemical Peel,04/09/2026,2026-04-22,quote_sent,,450,Nervous about needles,America/New_York
+Grace Ingram,grace.ingram99@example.com,(602) 555-0193,Google Ads,Lip Filler,"Feb 18, 2026",03/05/2026,quote_sent,,$300,Wants natural look,America/Los_Angeles
+Hannah Turner,hannah.turner85@example.com,+18185550138,Instagram DM,Botox,"Jun 17, 2026",,new,,1500.00,Prefers afternoons,America/Los_Angeles
+Marcus Ortiz,  MARCUS.ORTIZ25@EXAMPLE.COM ,8185550193,Website Form,Microneedling,04/01/2026,04/20/2026,quote_sent,,$300,Do not call,America/Los_Angeles
+Jack Bennett,jack.bennett57@example.com,1.786.555.0192,Groupon,Chemical Peel,04/06/2026,"Apr 12, 2026",quote_sent,,600.00,,America/New_York
+Tyler Iverson,tyler.iverson78@example.com,1.617.555.0158,Website Form,Lip Filler,07/04/2026,07/12/2026,no_show,,2400.00,Referred by a friend,America/New_York
+Priya Delgado,priya.delgado56@example.com,(305) 555-0176,Groupon,Body Contouring,"Apr 22, 2026",2026-04-25,lost,Not ready,"$1,500",Asked about downtime,America/Los_Angeles
+Sophia Morgan,sophia.morgan73@example.com,7135550114,Facebook Lead Ad,PRP Facial,2026-05-13,"Jun 01, 2026",quote_sent,,"$3,200",Asked about downtime,America/New_York
+Amelia Fisher,amelia.fisher41@example.com,+16465550122,Instagram DM,PRP Facial,"Sep 13, 2024",2024-10-14,quote_sent,no response,1200.00,Prefers afternoons,America/Los_Angeles
+NAOMI GONZALEZ,naomi.gonzalez1@example.com,4045550106,Facebook Lead Ad,Lip Filler,2026-07-15,07/27/2026,lost,busy at work,2400,First-timer,America/Los_Angeles
+Charlotte Brooks,charlotte.brooks31@example.com,1.949.555.0146,Google Ads,Chemical Peel,2025-07-02,2025-08-05,consult_booked,,1500.00,Referred by a friend,America/New_York
+Scarlett Morgan,scarlett.morgan60@example.com,+1 786 555 0188,Groupon,Botox,12/12/2025,,new,,"$1,500",Nervous about needles,America/New_York
+AVA XU,ava.xu81@example.com,+14155550106,Instagram DM,Skin Tightening,"Apr 11, 2026",04/26/2026,quote_sent,,"$1,200",,America/New_York
+Ava Jenkins,ava.jenkins68@example.com,+14695550138,Walk-in,PRP Facial,2026-07-26,2026-08-16,lost,after the holidays,"$1,500",unsubscribed,America/Denver
+Carlos Ramirez,carlos.ramirez13@example.com,6465550108,Website Form,Dermal Fillers,"May 05, 2026",,new,,2400.00,Wants natural look,America/New_York
+Tessa Castillo,tessa.castillo75@example.com,+1 718 555 0163,Google Ads,HydraFacial,"Jul 16, 2025",2025-08-16,consult_booked,no response,1200.00,Referred by a friend,America/New_York
+Maya Walker,MAYA.WALKER37@EXAMPLE.COM,,Walk-in,Dermal Fillers,02/10/2026,02/27/2026,no_show,,450.00,Nervous about needles,America/Chicago
+owen foster,owen.foster58@example.com,7865550130,Facebook Lead Ad,Lip Filler,"Apr 20, 2026",2026-05-08,quote_sent,,1200,Wants natural look,America/Los_Angeles
+diego murphy,diego.murphy85@example.com,+13125550111,Instagram DM,Lip Filler,11/25/2025,12/24/2025,lost,Not ready,600.00,Prefers afternoons,America/Los_Angeles
+Liam Xu,liam.xu60@example.com,8585550173,Groupon,PRP Facial,2026-07-15,2026-07-20,lost,Budget,600,Prefers afternoons,America/New_York
+LIAM MURPHY,liam.murphy50@example.com,(213) 555-0155,Website Form,Laser Hair Removal,03/20/2026,04/19/2026,lost,after the holidays,"$3,200",Interested in package deal,America/Chicago
+Emma Johnson,emma.johnson58@example.com,1.617.555.0163,Walk-in,Skin Tightening,08/05/2026,"Aug 20, 2026",no_show,,300.00,,America/New_York
+Emma Turner,emma.turner42@example.com,1.617.555.0164,Instagram DM,Chemical Peel,06/11/2026,"Jun 23, 2026",quote_sent,,300,Nervous about needles,America/Los_Angeles
+Lily Murphy,lily.murphy6@example.com,1.949.555.0113,Referral,Lip Filler,"Jun 04, 2026",2026-06-27,lost,Too expensive,$450,Asked about downtime,America/Chicago
+Charlotte Zimmerman,charlotte.zimmerman91@example.com,+12135550110,Groupon,Laser Hair Removal,2026-03-01,2026-03-21,quote_sent,,"$1,200",Interested in package deal,America/Los_Angeles
+Marcus Gonzalez,marcus.gonzalez60@example.com,+1 469 555 0184,Walk-in,Body Contouring,12/29/2025,01/18/2026,quote_sent,,1200,,America/New_York
+Jordan Ramirez,jordan.ramirez58@example.com,+17185550147,Instagram DM,Botox,2025-01-23,01/28/2025,quote_sent,went quiet,2400,Nervous about needles,America/Los_Angeles
+Camila Cooper,camila.cooper58@example.com,1.702.555.0165,Instagram DM,Skin Tightening,"Sep 05, 2026",,new,,"$3,200",Wants natural look,America/New_York
+Diego Castillo,diego.castillo46@example.com,+18585550157,Google Ads,Skin Tightening,"May 25, 2026",06/10/2026,lost,too pricey,$800,,America/New_York
+Jasmine Thompson,jasmine.thompson83@example.com,+1 858 555 0128,Google Ads,Microneedling,05/29/2026,,new,,2400.00,Referred by a friend,America/Chicago
+Ryan Evans,ryan.evans11@example.com,(469) 555-0158,Referral,Botox,05/04/2025,05/22/2025,new,,2400.00,,America/Los_Angeles
+Charlotte Valdez,charlotte.valdez63@example.com,+16465550141,Referral,PRP Facial,2026-07-21,"Aug 10, 2026",no_show,,$300,,America/Denver
+Brianna Ramirez,,,Groupon,Body Contouring,12/30/2024,2025-02-08,quote_sent,went quiet,$450,First-timer,America/New_York
+Elijah Foster,elijah.foster90@example.com,7205550125,Facebook Lead Ad,Skin Tightening,07/09/2025,08/03/2025,consult_booked,went quiet,600.00,Wants natural look,America/Los_Angeles
+Hannah Delgado,hannah.delgado56@example.com,1.602.555.0123,Walk-in,Lip Filler,07/13/2026,"Jul 31, 2026",lost,Budget,3200,Prefers afternoons,America/Los_Angeles
+Naomi Gonzalez,naomi.gonzalez39@example.com,1.213.555.0138,Walk-in,Lip Filler,2025-12-14,"Dec 23, 2025",quote_sent,,3200.00,,America/Chicago
+Noah Patel,noah.patel2@example.com,9495550118,Groupon,Body Contouring,"Jun 08, 2025",06/27/2025,consult_booked,no response,1500.00,,America/New_York
+Maya Watson,maya.watson85@example.com,+1 949 555 0104,Walk-in,Dermal Fillers,"Apr 23, 2026",2026-05-06,no_show,,300,Referred by a friend,America/Denver
+ella morgan,ella.morgan31@example.com,(713) 555-0161,Groupon,Botox,"Feb 26, 2026","Mar 19, 2026",lost,Budget,2400,unsubscribed,America/Chicago
+Elena Zhang,elena.zhang13@example.com,+1 404 555 0153,Walk-in,Chemical Peel,"Feb 01, 2026","Feb 12, 2026",lost,Too expensive,3200,Nervous about needles,America/New_York
+Charlotte Diaz,  CHARLOTTE.DIAZ28@EXAMPLE.COM ,6025550148,Facebook Lead Ad,Skin Tightening,2026-03-14,03/27/2026,lost,Found cheaper elsewhere,"$3,200",Wants natural look,America/New_York
+NAOMI KIM,naomi.kim62@example.com,+17185550183,Instagram DM,Skin Tightening,"May 03, 2026",,new,,800.00,Nervous about needles,America/New_York
+EVELYN MORGAN,evelyn.morgan9@example.com,4155550142,Groupon,Body Contouring,2026-09-13,,new,,$450,Interested in package deal,America/Los_Angeles
+Jordan Ellis,jordan.ellis89@example.com,4695550156,Google Ads,Microneedling,2026-03-02,,new,,450,Interested in package deal,America/Los_Angeles
+Jasmine Ortiz,,,Facebook Lead Ad,PRP Facial,2026-03-15,03/21/2026,lost,busy at work,"$2,400",First-timer,America/New_York
+Ryan Zimmerman,ryan.zimmerman36@example.com,858-555-0178,Groupon,Dermal Fillers,03/23/2026,"Mar 28, 2026",lost,too pricey,450,Asked about downtime,America/New_York
+Maya Turner,maya.turner48@example.com,9495550143,Google Ads,Chemical Peel,2025-11-16,2025-12-06,quote_sent,,300.00,,America/New_York
+Evelyn Foster,evelyn.foster79@example.com,+17185550114,Website Form,Skin Tightening,"Apr 22, 2026",,new,,300.00,,America/Chicago
+Devon Castillo,devon.castillo79@example.com,+1 713 555 0103,Facebook Lead Ad,PRP Facial,2024-12-16,"Jan 22, 2025",consult_booked,no response,$800,,America/Chicago
+Elena Xu,elena.xu9@example.com,+16465550147,Instagram DM,HydraFacial,"Oct 26, 2024",2024-10-30,lost,no response,"$2,400",,America/Los_Angeles
+EVELYN YOUNG,evelyn.young4@example.com,305-555-0147,Walk-in,Laser Hair Removal,"Jul 04, 2026",07/29/2026,no_show,,1500,Nervous about needles,America/Los_Angeles
+Aiden Carter,aiden.carter41@example.com,+1 305 555 0133,Referral,Skin Tightening,"Dec 03, 2025","Dec 30, 2025",lost,cost,300.00,First-timer,America/New_York
+Tessa Sanders,  TESSA.SANDERS41@EXAMPLE.COM ,5035550134,Google Ads,Chemical Peel,"Jul 19, 2026",,new,,450,,America/Denver
+ella kim,ella.kim50@example.com,1.917.555.0130,Website Form,Botox,2026-03-15,,new,,1500,,America/New_York
+Camila Reyes,CAMILA.REYES18@EXAMPLE.COM,+1 949 555 0177,Groupon,Skin Tightening,2025-06-11,07/13/2025,new,no response,2400.00,,America/Denver
+Noah Thompson,noah.thompson94@example.com,+13125550107,Facebook Lead Ad,Lip Filler,"Jun 09, 2025",2025-06-24,quote_sent,,"$1,500",Referred by a friend,America/Los_Angeles
+Olivia Hayes,olivia.hayes53@example.com,+13125550165,Facebook Lead Ad,Dermal Fillers,"Feb 02, 2026",,new,,450.00,First-timer,America/Los_Angeles
+OLIVIA HAYES,olivia.hayes87@example.com,1.917.555.0166,Google Ads,HydraFacial,"Jun 03, 2025",2025-07-01,quote_sent,,600.00,Asked about downtime,America/Chicago
+AMELIA VARGAS,amelia.vargas40@example.com,1.786.555.0193,Walk-in,Skin Tightening,2026-05-27,2026-06-01,quote_sent,,1500,Referred by a friend,America/New_York
+Elena Quinn,elena.quinn26@example.com,(305) 555-0102,Groupon,Microneedling,06/24/2026,2026-06-29,lost,traveling,3200,,America/Denver
+Liam Fisher,liam.fisher77@example.com,+17025550117,Instagram DM,Body Contouring,2026-07-01,,new,,"$1,500",DNC - asked not to be contacted,America/New_York
+Ethan Watson,ethan.watson16@example.com,949-555-0125,Referral,Dermal Fillers,05/10/2026,05/27/2026,lost,price,2400.00,Nervous about needles,America/Los_Angeles
+Maya Watson,maya.watson62@example.com,1.702.555.0114,Facebook Lead Ad,Skin Tightening,"Jun 17, 2026",2026-07-13,lost,busy at work,$450,Referred by a friend,America/Los_Angeles
+Lily Owens,lily.owens1@example.com,617-555-0183,Walk-in,HydraFacial,"Jan 24, 2026",,new,,300.00,Wants natural look,America/Chicago
+Henry Hayes,  HENRY.HAYES77@EXAMPLE.COM ,+13125550140,Referral,Body Contouring,05/05/2026,05/13/2026,quote_sent,,450,Referred by a friend,America/New_York
+Priya Delgado,priya.delgado67@example.com,+1 212 555 0125,Facebook Lead Ad,Body Contouring,04/26/2025,04/28/2025,quote_sent,went quiet,1200.00,,America/Denver
+camila vargas,camila.vargas70@example.com,(415) 555-0102,Walk-in,Skin Tightening,04/07/2026,2026-04-18,quote_sent,,"$1,200",Prefers afternoons,America/New_York
+camila vargas,CAMILA.VARGAS70@EXAMPLE.COM,,Walk-in,Skin Tightening,04/07/2026,2026-04-18,quote_sent,,"$1,200",Prefers afternoons,America/New_York
+Jack Nguyen,  JACK.NGUYEN58@EXAMPLE.COM ,4155550135,Google Ads,Laser Hair Removal,07/22/2026,2026-07-31,quote_sent,,600.00,Wants natural look,America/Los_Angeles
+Brianna Valdez,brianna.valdez91@example.com,(702) 555-0175,Instagram DM,Lip Filler,2026-06-12,2026-07-05,no_show,,"$1,500",Asked about downtime,America/New_York
+Noah Kim,noah.kim60@example.com,+17205550153,Website Form,Skin Tightening,"Feb 10, 2025",2025-03-20,quote_sent,no response,800,Nervous about needles,America/New_York
+Carlos Johnson,carlos.johnson46@example.com,+1 212 555 0148,Instagram DM,Botox,12/03/2025,2025-12-16,quote_sent,,3200,First-timer,America/Los_Angeles
+DIEGO NELSON,diego.nelson98@example.com,4695550119,Groupon,Body Contouring,2024-10-31,2024-12-03,new,went quiet,$600,Nervous about needles,America/Los_Angeles
+Emma Thompson,emma.thompson73@example.com,(503) 555-0151,Walk-in,Chemical Peel,2026-08-08,08/30/2026,lost,Not ready,800,Prefers afternoons,America/New_York
+Kevin Patel,kevin.patel38@example.com,6025550150,Referral,HydraFacial,2025-05-27,2025-06-04,consult_booked,went quiet,3200.00,Referred by a friend,America/Chicago
+Ava Yoder,ava.yoder99@example.com,1.786.555.0108,Instagram DM,Skin Tightening,"Jul 24, 2026",,new,,600.00,Interested in package deal,America/New_York
+Ethan Xu,  ETHAN.XU4@EXAMPLE.COM ,1.702.555.0194,Instagram DM,HydraFacial,2026-03-17,,new,,1500.00,,America/Chicago
+ethan garcia,  ETHAN.GARCIA72@EXAMPLE.COM ,7135550147,Walk-in,Chemical Peel,07/16/2026,,new,,1500.00,Asked about downtime,America/Los_Angeles
+Maya Walker,maya.walker83@example.com,,Walk-in,Chemical Peel,05/01/2026,,new,,300.00,Asked about downtime,America/Chicago
+Grace Gonzalez,grace.gonzalez61@example.com,949-555-0157,Instagram DM,PRP Facial,2026-02-13,2026-02-20,quote_sent,,1500.00,Wants natural look,America/New_York
+Monica Gonzalez,monica.gonzalez65@example.com,00000,Walk-in,Dermal Fillers,05/19/2026,06/10/2026,no_show,,$800,First-timer,America/New_York
+Elijah Watson,,,Walk-in,HydraFacial,03/16/2026,,new,,"$3,200",,America/Denver
+Harper Ellis,harper.ellis80@example.com,1.617.555.0186,Referral,PRP Facial,06/17/2026,06/19/2026,quote_sent,,2400.00,Referred by a friend,America/New_York
+Monica Valdez,monica.valdez72@example.com,1.602.555.0170,Instagram DM,HydraFacial,08/10/2026,,new,,600,,America/New_York
+Isabella Young,isabella.young81@example.com,3055550170,Groupon,Dermal Fillers,05/22/2026,06/16/2026,lost,Not ready,1500,,America/Chicago
+Kevin Delgado,kevin.delgado55@example.com,1.949.555.0192,Referral,Lip Filler,"Jun 03, 2026",2026-06-23,no_show,,3200,Interested in package deal,America/Los_Angeles
+Alicia Yoder,  ALICIA.YODER72@EXAMPLE.COM ,1.702.555.0101,Instagram DM,Chemical Peel,2026-06-06,06/09/2026,quote_sent,,600.00,,America/Los_Angeles
+Brianna Zimmerman,brianna.zimmerman31@example.com,(617) 555-0182,Website Form,Chemical Peel,2026-01-23,01/28/2026,quote_sent,,3200.00,Asked about downtime,America/Denver
+Evelyn Foster,EVELYN.FOSTER79@EXAMPLE.COM,+17185550114,Website Form,Skin Tightening,"Apr 22, 2026",,new,,300.00,,America/Chicago
+Olivia Underwood,olivia.underwood48@example.com,2135550137,Facebook Lead Ad,PRP Facial,07/15/2026,,new,,2400.00,Asked about downtime,America/New_York
+Abigail Mitchell,abigail.mitchell2@example.com,312-555-0150,Website Form,Botox,2025-12-08,12/14/2025,quote_sent,,300.00,Nervous about needles,America/New_York
+Carlos Owens,  CARLOS.OWENS87@EXAMPLE.COM ,646-555-0111,Google Ads,PRP Facial,2025-04-10,"Apr 22, 2025",quote_sent,,1200.00,,America/Denver
+JAMES THOMPSON,jane@@gmail,(617) 555-0177,Walk-in,Microneedling,"Mar 16, 2026",,new,,3200,Prefers afternoons,America/New_York
+Owen Castillo,owen.castillo84@example.com,1.646.555.0144,Walk-in,Chemical Peel,2025-02-28,"Mar 10, 2025",lost,went quiet,$300,Interested in package deal,America/New_York
+Tyler Watson,tyler.watson84@example.com,305-555-0101,Groupon,Botox,"Jun 29, 2026",07/15/2026,quote_sent,,3200.00,,America/New_York
+Priya Quinn,priya.quinn55@example.com,+1 213 555 0111,Google Ads,Skin Tightening,2026-08-06,2026-08-09,lost,Budget,"$1,200",,America/New_York
+OWEN LOPEZ,owen.lopez24@example.com,+12135550150,Walk-in,Skin Tightening,"Jul 20, 2026",07/22/2026,quote_sent,,"$1,200",Wants natural look,America/Los_Angeles
+Emma Hayes,emma.hayes24@example.com,+1 469 555 0198,Website Form,Laser Hair Removal,2024-10-01,2024-10-11,lost,no response,450.00,Wants natural look,America/Chicago
+Devon Quinn,not-an-email,1.305.555.0182,Website Form,PRP Facial,2026-02-20,2026-03-07,lost,Budget,600.00,,America/New_York
+Owen Young,owen.young56@example.com,+17205550180,Referral,Botox,"Jul 31, 2026",2026-08-14,quote_sent,,1500,,America/Los_Angeles
+Ella Ramirez,ella.ramirez91@example.com,1.713.555.0116,Walk-in,Skin Tightening,2026-03-18,"Apr 09, 2026",no_show,,450.00,Prefers afternoons,America/Denver
+ELENA ZIMMERMAN,elena.zimmerman54@example.com,+1 858 555 0164,Website Form,Laser Hair Removal,"Feb 25, 2026","Mar 22, 2026",lost,too pricey,$300,First-timer,America/Los_Angeles
+JACK FOSTER,jack.foster66@example.com,1.917.555.0101,Facebook Lead Ad,Body Contouring,2025-05-30,2025-06-17,new,no response,2400,Referred by a friend,America/Los_Angeles
+Mia Murphy,mia.murphy57@example.com,702-555-0170,Google Ads,Dermal Fillers,2026-07-19,2026-07-25,quote_sent,,$800,,America/New_York
+NAOMI BROOKS,naomi.brooks82@example.com,(713) 555-0160,Facebook Lead Ad,PRP Facial,"Feb 18, 2026",03/01/2026,lost,cost,"$2,400",,America/New_York
+Amelia Sanders,amelia.sanders28@example.com,(212) 555-0192,Instagram DM,Microneedling,2025-01-28,03/06/2025,quote_sent,no response,"$3,200",,America/Los_Angeles
+Jasmine Ortiz,JASMINE.ORTIZ16@EXAMPLE.COM,,Referral,HydraFacial,2025-12-13,"Dec 18, 2025",quote_sent,,$300,Asked about downtime,America/Chicago
+LILY RAMIREZ,  LILY.RAMIREZ52@EXAMPLE.COM ,+12125550107,Website Form,PRP Facial,"Jun 14, 2026","Jul 01, 2026",quote_sent,,2400.00,Interested in package deal,America/Chicago
+Noah Reyes,,404-555-0189,Google Ads,Dermal Fillers,"Mar 17, 2026",2026-04-15,lost,price,600,Prefers afternoons,America/Los_Angeles
+Liam Morgan,liam.morgan29@example.com,469-555-0136,Website Form,Dermal Fillers,2026-06-30,,new,,1200.00,Nervous about needles,America/New_York
+Carlos Watson,  CARLOS.WATSON80@EXAMPLE.COM ,(786) 555-0169,Walk-in,Dermal Fillers,04/25/2026,2026-05-20,no_show,,450.00,Wants natural look,America/Chicago
+Ella Zimmerman,  ELLA.ZIMMERMAN58@EXAMPLE.COM ,1.702.555.0156,Walk-in,Botox,2025-03-30,2025-04-13,new,no response,$450,,America/Chicago
+Brianna Gonzalez,brianna.gonzalez45@example.com,1.212.555.0115,Google Ads,PRP Facial,2026-07-17,2026-08-01,quote_sent,,450.00,Interested in package deal,America/Los_Angeles
+MASON WATSON,mason.watson11@example.com,8185550115,Website Form,Botox,04/11/2026,2026-04-28,lost,wedding in spring,600,,America/Los_Angeles
+Emma Turner,emma.turner3@example.com,(213) 555-0190,Google Ads,HydraFacial,06/29/2026,"Jul 09, 2026",no_show,,"$1,500",Asked about downtime,America/New_York
+VICTORIA INGRAM,  VICTORIA.INGRAM11@EXAMPLE.COM ,602-555-0161,Referral,Dermal Fillers,"Dec 23, 2025",,new,,"$1,200",Prefers afternoons,America/Denver
+Elijah Hayes,elijah.hayes10@example.com,8585550185,Google Ads,Body Contouring,2025-07-13,08/09/2025,new,no response,"$2,400",,America/Chicago
+devon perry,  DEVON.PERRY14@EXAMPLE.COM ,+14695550187,Groupon,Body Contouring,"Dec 29, 2025",2026-01-02,quote_sent,,800.00,unsubscribed,America/New_York
+Henry Ellis,henry.ellis40@example.com,8585550183,Website Form,HydraFacial,02/05/2026,02/23/2026,quote_sent,,1200,Interested in package deal,America/New_York
+Ethan Murphy,ethan.murphy26@example.com,1.404.555.0161,Google Ads,Chemical Peel,"Jan 13, 2025","Feb 18, 2025",quote_sent,went quiet,"$3,200",First-timer,America/New_York
+Isabella Johnson,jane@@gmail,503-555-0182,Google Ads,Body Contouring,"Jul 23, 2026",07/27/2026,lost,price,600,Wants natural look,America/Los_Angeles
+Ava Bennett,ava.bennett76@example.com,818-555-0162,Referral,HydraFacial,"Dec 15, 2025",2025-12-25,quote_sent,,3200.00,,America/New_York
+Jasmine Carter,jasmine.carter72@example.com,(858) 555-0190,Walk-in,HydraFacial,"Jun 19, 2026",2026-07-02,lost,price,800,Referred by a friend,America/Chicago
+logan evans,logan.evans87@example.com,713-555-0181,Instagram DM,Body Contouring,2026-04-19,,new,,800,Prefers afternoons,America/Chicago
+EVELYN CARTER,evelyn.carter21@example.com,1.404.555.0173,Referral,Microneedling,"Jan 08, 2026",,new,,600.00,,America/New_York
+Isabella Hughes,isabella.hughes6@example.com,7025550173,Referral,Microneedling,2026-06-29,07/13/2026,lost,Budget,600,Nervous about needles,America/New_York
+Noah Thompson,  NOAH.THOMPSON85@EXAMPLE.COM ,+13055550134,Walk-in,PRP Facial,11/28/2024,"Jan 05, 2025",consult_booked,no response,2400.00,Wants natural look,America/Chicago
+Elijah Ramirez,  ELIJAH.RAMIREZ90@EXAMPLE.COM ,+13055550181,Referral,Laser Hair Removal,09/05/2024,10/01/2024,new,,1200,,America/Los_Angeles
+Liam Iverson,liam.iverson3@example.com,n/a,Website Form,Chemical Peel,06/28/2026,,new,,2400,,America/New_York
+Devon Delgado,devon.delgado12@example.com,4045550193,Walk-in,Dermal Fillers,2026-02-11,"Feb 21, 2026",lost,Found cheaper elsewhere,"$2,400",Nervous about needles,America/Los_Angeles
+Lucas Lopez,  LUCAS.LOPEZ95@EXAMPLE.COM ,718-555-0103,Google Ads,HydraFacial,2026-01-10,01/19/2026,quote_sent,,1500,Wants natural look,America/Chicago
+Camila Reyes,camila.reyes18@example.com,+1 949 555 0177,Groupon,Skin Tightening,2025-06-11,07/13/2025,new,no response,2400.00,,America/Denver
+Isabella Reyes,isabella.reyes13@example.com,720-555-0131,Referral,Chemical Peel,2026-04-02,2026-04-17,lost,too pricey,300,Prefers afternoons,America/Los_Angeles
+Chloe Quinn,chloe.quinn39@example.com,617-555-0111,Facebook Lead Ad,Body Contouring,2026-07-07,,new,,800,Interested in package deal,America/Los_Angeles
+Elijah Brooks,  ELIJAH.BROOKS43@EXAMPLE.COM ,(818) 555-0161,Referral,Laser Hair Removal,2026-06-23,"Jul 06, 2026",lost,busy at work,800,,America/New_York
+Tyler Mitchell,TYLER.MITCHELL50@EXAMPLE.COM,,Facebook Lead Ad,Laser Hair Removal,07/04/2026,"Jul 07, 2026",lost,price,600.00,Referred by a friend,America/New_York
+Olivia Garcia,olivia.garcia56@example.com,8585550181,Walk-in,PRP Facial,2025-02-13,"Mar 02, 2025",lost,,1200,Wants natural look,America/New_York
+Amelia Underwood,  AMELIA.UNDERWOOD98@EXAMPLE.COM ,1.312.555.0195,Instagram DM,Body Contouring,2025-04-27,05/10/2025,consult_booked,no response,$600,First-timer,America/Chicago
+Jasmine Perry,jasmine.perry87@example.com,(718) 555-0108,Groupon,PRP Facial,2026-07-13,07/24/2026,quote_sent,,300,Prefers afternoons,America/Los_Angeles
+Harper Sanders,harper.sanders74@example.com,6025550106,Referral,Skin Tightening,05/05/2026,05/27/2026,lost,busy at work,"$2,400",,America/Chicago
+CHLOE STEWART,chloe.stewart34@example.com,213-555-0174,Instagram DM,Body Contouring,2025-11-24,12/11/2025,quote_sent,,$600,Nervous about needles,America/New_York
+Carlos Ingram,carlos.ingram4@example.com,404-555-0167,Instagram DM,Skin Tightening,2026-02-27,"Mar 29, 2026",lost,Budget,300.00,Interested in package deal,America/Los_Angeles
+Henry Underwood,henry.underwood44@example.com,1.415.555.0158,Website Form,Body Contouring,"Apr 15, 2026",2026-05-07,lost,after the holidays,1500.00,Asked about downtime,America/Los_Angeles
+Chloe Ellis,  CHLOE.ELLIS29@EXAMPLE.COM ,+1 917 555 0131,Facebook Lead Ad,Laser Hair Removal,2026-07-13,08/07/2026,no_show,,1200,,America/Chicago
+AVA BROOKS,ava.brooks71@example.com,602-555-0127,Referral,Lip Filler,2026-08-02,,new,,"$2,400",Wants natural look,America/Los_Angeles
+Marcus Xu,marcus.xu1@example.com,646-555-0154,Google Ads,Lip Filler,04/24/2026,05/22/2026,lost,bad timing,1500,Prefers afternoons,America/Los_Angeles
+Devon Yoder,devon.yoder85@example.com,5035550161,Groupon,Lip Filler,2026-06-13,2026-07-12,lost,too pricey,2400,First-timer,America/Chicago
+Abigail Foster,abigail.foster59@example.com,7185550189,Instagram DM,Body Contouring,10/10/2024,10/16/2024,quote_sent,went quiet,450,Prefers afternoons,America/Chicago
+emma fisher,emma.fisher99@example.com,(858) 555-0106,Google Ads,Body Contouring,2026-01-02,,new,,"$2,400",,America/Chicago
+Jordan Foster,jordan.foster9@example.com,1.786.555.0184,Referral,Lip Filler,"Nov 21, 2025",12/05/2025,quote_sent,,600,Referred by a friend,America/Chicago
+emma zimmerman,emma.zimmerman81@example.com,1.786.555.0109,Referral,Microneedling,"Jul 12, 2026",,new,,300.00,,America/Los_Angeles
+Elena Delgado,  ELENA.DELGADO6@EXAMPLE.COM ,1.646.555.0151,Facebook Lead Ad,Skin Tightening,2025-07-23,08/13/2025,consult_booked,,"$3,200",unsubscribed,America/New_York
+Ethan Zhang,ethan.zhang96@example.com,(718) 555-0167,Referral,Botox,"Jan 27, 2026",,new,,450.00,Interested in package deal,America/Los_Angeles
+Hannah Hughes,hannah.hughes59@example.com,6465550126,Walk-in,Dermal Fillers,2026-02-15,2026-03-03,no_show,,$800,,America/New_York
+PRIYA PERRY,priya.perry17@example.com,1.415.555.0118,Walk-in,Laser Hair Removal,"Jan 06, 2026",01/13/2026,lost,busy at work,"$3,200",Referred by a friend,America/Los_Angeles
+Alicia Nguyen,alicia.nguyen42@example.com,(713) 555-0174,Website Form,Laser Hair Removal,05/18/2026,,new,,1500,,America/New_York
+Abigail Morgan,abigail.morgan94@example.com,312-555-0142,Instagram DM,PRP Facial,"Apr 19, 2026",05/14/2026,lost,price,3200,,America/Los_Angeles
+Andre Cooper,andre.cooper94@example.com,+17865550159,Facebook Lead Ad,Lip Filler,02/19/2025,2025-03-06,new,no response,1200,Interested in package deal,America/New_York
+Ryan Lawson,ryan.lawson15@example.com,213-555-0135,Groupon,PRP Facial,2026-02-05,,new,,3200.00,Prefers afternoons,America/Los_Angeles
+LOGAN MURPHY,logan.murphy85@example.com,720-555-0134,Facebook Lead Ad,Botox,"Feb 10, 2025",2025-02-23,consult_booked,went quiet,1500,unsubscribed,America/Los_Angeles
+Evelyn Lawson,evelyn.lawson99@example.com,+18585550127,Website Form,Botox,02/25/2026,2026-03-14,lost,after the holidays,"$1,200",DNC - asked not to be contacted,America/Chicago
+Ethan Owens,ethan.owens2@example.com,6025550135,Instagram DM,Lip Filler,2026-05-11,"May 31, 2026",quote_sent,,$450,,America/Chicago
+Alicia Ramirez,alicia.ramirez56@example.com,00000,Website Form,Microneedling,07/29/2025,"Aug 04, 2025",lost,,450.00,Referred by a friend,America/Los_Angeles
+Ella Lawson,ella.lawson31@example.com,,Website Form,Skin Tightening,"Mar 02, 2026",2026-03-14,lost,Budget,800,First-timer,America/Los_Angeles
+camila ingram,camila.ingram27@example.com,7135550131,Referral,PRP Facial,2026-07-19,2026-08-05,lost,traveling,"$1,500",,America/Los_Angeles
+Victoria Evans,victoria.evans85@example.com,6465550179,Instagram DM,Microneedling,"Mar 23, 2026",04/13/2026,no_show,,450.00,Wants natural look,America/New_York
+Priya Walker,priya.walker3@example.com,+14695550121,Walk-in,Botox,05/01/2026,"May 10, 2026",no_show,,800,Asked about downtime,America/Los_Angeles
+Abigail Cooper,abigail.cooper35@example.com,1.718.555.0143,Google Ads,Skin Tightening,05/06/2026,,new,,300,Wants natural look,America/Chicago
+HARPER BENNETT,harper.bennett21@example.com,+1 602 555 0136,Google Ads,Skin Tightening,09/30/2024,10/15/2024,consult_booked,,1200.00,,America/New_York
+Aiden Foster,aiden.foster91@example.com,6465550185,Referral,HydraFacial,2024-10-26,2024-11-29,lost,no response,$450,,America/New_York
+Lucas Zhang,lucas.zhang39@example.com,(858) 555-0172,Instagram DM,PRP Facial,"Mar 09, 2026",,new,,450,,America/Chicago
+James Garcia,james.garcia34@example.com,+1 786 555 0116,Website Form,Chemical Peel,02/18/2026,"Feb 22, 2026",quote_sent,,600,Asked about downtime,America/Los_Angeles
+Tyler Quinn,tyler.quinn8@example.com,1.305.555.0112,Facebook Lead Ad,Botox,02/14/2025,"Mar 01, 2025",consult_booked,no response,300.00,First-timer,America/Denver
+Grace Valdez,grace.valdez25@example.com,(404) 555-0117,Groupon,Skin Tightening,2025-07-26,2025-08-07,new,,450,Interested in package deal,America/Los_Angeles
+Hannah Brooks,hannah.brooks85@example.com,+14045550192,Walk-in,PRP Facial,07/20/2026,,new,,2400.00,,America/New_York
+Evelyn Cooper,,+17025550146,Referral,Chemical Peel,07/11/2026,,new,,300,Interested in package deal,America/Chicago
+Tessa Jenkins,tessa.jenkins59@example.com,1.212.555.0127,Facebook Lead Ad,Botox,"Aug 28, 2026",,new,,1500.00,First-timer,America/Denver
+Monica Owens,monica.owens85@example.com,+1 949 555 0160,Referral,Chemical Peel,"Jan 09, 2026",2026-01-15,lost,Not ready,"$1,500",Do not call,America/New_York
+CAMILA REYES,camila.reyes11@example.com,+13055550193,Referral,Microneedling,2026-05-23,"Jun 14, 2026",no_show,,2400,Wants natural look,America/Chicago
+Hannah Stewart,hannah.stewart1@example.com,+1 404 555 0174,Website Form,Body Contouring,"Jun 13, 2026","Jun 30, 2026",lost,too pricey,600,Wants natural look,America/Denver
+Mia Watson,mia.watson12@example.com,(718) 555-0152,Referral,Skin Tightening,"Feb 22, 2026",,new,,300,,America/Chicago
+Priya Vargas,priya.vargas81@example.com,(213) 555-0105,Instagram DM,Body Contouring,2026-08-20,08/26/2026,lost,bad timing,"$3,200",Interested in package deal,America/Chicago
+Sophia Murphy,sophia.murphy4@example.com,4155550185,Facebook Lead Ad,Dermal Fillers,"May 21, 2025",2025-06-07,lost,no response,450.00,,America/New_York
+Charlotte Gonzalez,charlotte.gonzalez98@example.com,(503) 555-0103,Google Ads,Dermal Fillers,12/19/2025,"Dec 24, 2025",lost,too pricey,1200.00,Nervous about needles,America/Los_Angeles
+Elijah Stewart,elijah.stewart40@example.com,+19175550122,Referral,Botox,2026-06-19,"Jun 29, 2026",no_show,,1200,,America/Los_Angeles
+Diego Anderson,diego.anderson18@example.com,1.415.555.0196,Google Ads,Chemical Peel,2026-06-03,2026-06-13,no_show,,3200,First-timer,America/New_York
+Ryan Cooper,not-an-email,1.786.555.0115,Groupon,Chemical Peel,2026-03-06,03/20/2026,no_show,,1500,Prefers afternoons,America/New_York
+Lucas Foster,  LUCAS.FOSTER29@EXAMPLE.COM ,6175550104,Facebook Lead Ad,Body Contouring,"Jun 03, 2026",06/30/2026,lost,Found cheaper elsewhere,1200.00,First-timer,America/New_York
+Harper Reyes,harper.reyes57@example.com,8585550116,Referral,Botox,"Jul 27, 2026",,new,,3200,,America/New_York
+Elijah Brooks,elijah.brooks36@example.com,4695550151,Facebook Lead Ad,Body Contouring,2026-03-19,"Apr 01, 2026",quote_sent,,450,Referred by a friend,America/New_York
+Lucas Young,lucas.young97@example.com,+1 713 555 0136,Referral,Laser Hair Removal,06/08/2026,"Jun 19, 2026",quote_sent,,$600,Interested in package deal,America/Chicago
+Aiden Kim,aiden.kim78@example.com,4155550120,Instagram DM,PRP Facial,2026-06-02,,new,,450.00,Prefers afternoons,America/Denver
+Andre Lawson,andre.lawson49@example.com,+1 415 555 0148,Website Form,Lip Filler,07/20/2026,"Aug 08, 2026",lost,traveling,"$1,500",Prefers afternoons,America/Los_Angeles
+Elijah Murphy,elijah.murphy68@example.com,(917) 555-0116,Facebook Lead Ad,Skin Tightening,12/22/2025,01/13/2026,no_show,,2400.00,,America/New_York
+Liam Lopez,LIAM.LOPEZ42@EXAMPLE.COM,,Google Ads,Skin Tightening,03/01/2025,"Apr 09, 2025",new,,600,Referred by a friend,America/Los_Angeles
+Maya Watson,MAYA.WATSON85@EXAMPLE.COM,+1 949 555 0104,Walk-in,Dermal Fillers,"Apr 23, 2026",2026-05-06,no_show,,300,Referred by a friend,America/Denver
+Marcus Lopez,marcus.lopez94@example.com,8585550144,Website Form,Lip Filler,2026-03-21,"Apr 09, 2026",quote_sent,,3200.00,,America/Denver
+lucas yoder,lucas.yoder93@example.com,702-555-0121,Facebook Lead Ad,Botox,05/26/2026,2026-06-15,lost,cost,3200.00,,America/New_York
+Amelia Gonzalez,  AMELIA.GONZALEZ35@EXAMPLE.COM ,+17205550149,Website Form,Lip Filler,"Jul 13, 2026",2026-08-09,lost,Found cheaper elsewhere,2400.00,Nervous about needles,America/New_York
+Lucas Carter,lucas.carter89@example.com,858-555-0163,Instagram DM,Dermal Fillers,"Feb 20, 2026",2026-03-01,quote_sent,,3200.00,DNC - asked not to be contacted,America/New_York
+Charlotte Zimmerman,CHARLOTTE.ZIMMERMAN91@EXAMPLE.COM,+12135550110,Groupon,Laser Hair Removal,2026-03-01,2026-03-21,quote_sent,,"$1,200",Interested in package deal,America/Los_Angeles
+Lucas Lopez,lucas.lopez25@example.com,5035550178,Referral,Dermal Fillers,05/08/2026,"May 28, 2026",quote_sent,,$450,,America/Chicago
+Diego Morgan,diego.morgan83@example.com,+1 702 555 0144,Instagram DM,Lip Filler,04/30/2026,"May 06, 2026",lost,bad timing,600.00,Wants natural look,America/Los_Angeles
+Grace Walker,grace.walker90@example.com,4695550185,Referral,HydraFacial,"May 13, 2026",06/01/2026,quote_sent,,$450,Asked about downtime,America/New_York
+harper sanders,harper.sanders66@example.com,+1 415 555 0121,Instagram DM,Microneedling,2025-12-13,,new,,"$1,200",First-timer,America/Los_Angeles
+Jack Brooks,jack.brooks54@example.com,7865550113,Google Ads,Dermal Fillers,06/10/2026,"Jun 16, 2026",quote_sent,,450.00,Nervous about needles,America/Los_Angeles
+logan xu,logan.xu27@example.com,+1 503 555 0105,Facebook Lead Ad,Skin Tightening,"Mar 13, 2026",,new,,1500,Interested in package deal,America/Chicago
+Hannah Underwood,hannah.underwood90@example.com,+1 786 555 0175,Groupon,Botox,2024-12-12,12/31/2024,quote_sent,no response,3200,,America/Los_Angeles
+Camila Ingram,camila.ingram91@example.com,7865550197,Walk-in,Body Contouring,"Dec 16, 2025",,new,,1200,,America/New_York
+JAMES WATSON,james.watson51@example.com,+1 602 555 0177,Walk-in,Dermal Fillers,2024-12-19,2025-01-11,consult_booked,no response,1200,,America/New_York
+Tyler Hayes,tyler.hayes41@example.com,1.404.555.0141,Website Form,Lip Filler,2026-01-19,01/30/2026,quote_sent,,600,First-timer,America/New_York
+Jasmine Ortiz,jasmine.ortiz16@example.com,(617) 555-0124,Referral,HydraFacial,2025-12-13,"Dec 18, 2025",quote_sent,,$300,Asked about downtime,America/Chicago
+Maya Castillo,maya.castillo20@example.com,212-555-0114,Groupon,Microneedling,2025-12-03,12/20/2025,quote_sent,,"$3,200",,America/New_York
+Jordan Hughes,  JORDAN.HUGHES58@EXAMPLE.COM ,+1 305 555 0114,Instagram DM,Chemical Peel,"Jun 21, 2025","Jul 24, 2025",consult_booked,went quiet,"$1,500",Referred by a friend,America/New_York
+Tessa Murphy,tessa.murphy73@example.com,+18585550110,Instagram DM,HydraFacial,2026-06-22,"Jul 08, 2026",quote_sent,,600,,America/Chicago
+Maya Morgan,maya.morgan57@example.com,1.702.555.0186,Instagram DM,Body Contouring,2026-03-17,"Mar 31, 2026",quote_sent,,3200,Referred by a friend,America/Chicago
+Harper Valdez,HARPER.VALDEZ14@EXAMPLE.COM,6465550152,Groupon,HydraFacial,12/28/2024,"Feb 03, 2025",lost,no response,600.00,Referred by a friend,America/Los_Angeles
+Owen Morgan,owen.morgan61@example.com,(713) 555-0128,Walk-in,Chemical Peel,07/07/2025,2025-08-03,quote_sent,,3200,First-timer,America/New_York
+Victoria Valdez,  VICTORIA.VALDEZ62@EXAMPLE.COM ,(312) 555-0109,Facebook Lead Ad,Body Contouring,2026-09-06,,new,,"$2,400",Asked about downtime,America/Chicago
+Marcus Kelly,marcus.kelly41@example.com,+1 702 555 0109,Instagram DM,Chemical Peel,05/26/2026,06/14/2026,lost,Too expensive,800,Referred by a friend,America/New_York
+andre thompson,andre.thompson99@example.com,+14155550197,Referral,Body Contouring,"Aug 15, 2026","Sep 07, 2026",no_show,,450.00,DNC - asked not to be contacted,America/Denver
+Elijah Mitchell,elijah.mitchell85@example.com,+1 646 555 0177,Groupon,Lip Filler,2026-06-22,"Jul 04, 2026",lost,cost,"$3,200",Prefers afternoons,America/Chicago
+Jasmine Ramirez,jasmine.ramirez84@example.com,7205550189,Referral,Body Contouring,2025-04-24,2025-05-13,new,,2400.00,Referred by a friend,America/Los_Angeles
+Sophia Ortiz,sophia.ortiz88@example.com,00000,Facebook Lead Ad,Body Contouring,05/22/2026,"May 27, 2026",lost,too pricey,1500.00,Wants natural look,America/Los_Angeles
+Jasmine Castillo,jasmine.castillo62@example.com,+17185550151,Groupon,Skin Tightening,2026-09-25,,new,,"$2,400",,America/New_York
+KEVIN KELLY,kevin.kelly53@example.com,1.404.555.0138,Instagram DM,Skin Tightening,06/27/2026,"Jul 15, 2026",quote_sent,,3200,Asked about downtime,America/New_York
+LUCAS REYES,lucas.reyes23@example.com,1.602.555.0184,Google Ads,Chemical Peel,"Dec 03, 2025","Dec 05, 2025",quote_sent,,$300,,America/Denver
+Alicia Watson,alicia.watson12@example.com,+17865550176,Referral,Body Contouring,"Mar 22, 2025","Apr 05, 2025",lost,,$450,First-timer,America/New_York
+Ethan Gonzalez,ethan.gonzalez7@example.com,+1 212 555 0167,Referral,Chemical Peel,"Dec 24, 2025",01/12/2026,lost,price,2400,First-timer,America/Los_Angeles
+Alicia Ellis,alicia.ellis65@example.com,+14155550170,Website Form,Chemical Peel,06/04/2026,"Jun 26, 2026",no_show,,1500,First-timer,America/Chicago
+Isabella Bennett,isabella.bennett93@example.com,+17025550185,Facebook Lead Ad,Chemical Peel,"Mar 09, 2025",04/16/2025,lost,no response,$300,,America/Chicago
+Ethan Johnson,ethan.johnson35@example.com,1.702.555.0167,Instagram DM,HydraFacial,"Mar 30, 2026","Apr 16, 2026",quote_sent,,600.00,Wants natural look,America/Denver
+Tyler Young,tyler.young89@example.com,404-555-0120,Website Form,Lip Filler,2026-02-15,,new,,600.00,,America/New_York
+Noah Patel,NOAH.PATEL2@EXAMPLE.COM,9495550118,Groupon,Body Contouring,"Jun 08, 2025",06/27/2025,consult_booked,no response,1500.00,,America/New_York
+Scarlett Reyes,scarlett.reyes71@example.com,213-555-0164,Google Ads,Chemical Peel,2026-01-14,01/23/2026,quote_sent,,2400.00,,America/New_York
+Aiden Reyes,aiden.reyes18@example.com,503-555-0109,Groupon,HydraFacial,06/05/2026,06/13/2026,no_show,,450,,America/Chicago
+Chloe Perry,chloe.perry27@example.com,(917) 555-0183,Groupon,Chemical Peel,05/17/2026,"Jun 03, 2026",lost,bad timing,$800,Prefers afternoons,America/New_York
+Elena Zimmerman,elena.zimmerman66@example.com,702-555-0128,Google Ads,Microneedling,"Jul 13, 2026",08/09/2026,lost,Too expensive,3200.00,,America/Chicago
+charlotte morgan,charlotte.morgan32@example.com,+1 312 555 0198,Instagram DM,Lip Filler,01/14/2026,"Jan 24, 2026",lost,cost,2400,,America/Chicago
+Chloe Vargas,chloe.vargas61@example.com,+1 503 555 0106,Groupon,Dermal Fillers,2026-03-21,,new,,"$1,200",,America/Chicago
+Elijah Gonzalez,elijah.gonzalez44@example.com,+17865550103,Walk-in,Botox,2026-06-05,"Jul 04, 2026",lost,after the holidays,2400,,America/New_York
+Naomi Quinn,naomi.quinn84@example.com,+18585550169,Google Ads,Skin Tightening,"Mar 24, 2026",,new,,$600,Prefers afternoons,America/Denver
+PRIYA XU,  PRIYA.XU93@EXAMPLE.COM ,(818) 555-0197,Referral,Botox,"Aug 04, 2026",2026-08-15,lost,Found cheaper elsewhere,800.00,Referred by a friend,America/Denver
+ANDRE GARCIA,andre.garcia41@example.com,404-555-0162,Google Ads,Skin Tightening,12/22/2024,"Jan 03, 2025",new,went quiet,1500.00,Prefers afternoons,America/Los_Angeles
+Carlos Turner,carlos.turner72@example.com,(702) 555-0153,Referral,Skin Tightening,2026-06-21,,new,,800,,America/New_York
+Jasmine Perry,jasmine.perry18@example.com,1.718.555.0121,Referral,Body Contouring,"Apr 20, 2025","Apr 23, 2025",lost,went quiet,$800,Wants natural look,America/New_York
+Aiden Nelson,not-an-email,+1 213 555 0131,Website Form,HydraFacial,"Feb 15, 2026",,new,,2400.00,Asked about downtime,America/Chicago
+Liam Delgado,  LIAM.DELGADO53@EXAMPLE.COM ,646-555-0153,Instagram DM,Skin Tightening,2026-01-10,"Jan 28, 2026",quote_sent,,800,First-timer,America/Los_Angeles
+Isabella Patel,isabella.patel48@example.com,617-555-0114,Walk-in,Laser Hair Removal,"Feb 06, 2026",2026-02-24,no_show,,600,First-timer,America/Chicago
+Sophia Ortiz,SOPHIA.ORTIZ64@EXAMPLE.COM,(305) 555-0119,Instagram DM,Botox,02/09/2025,03/07/2025,lost,no response,$800,Nervous about needles,America/Los_Angeles
+Logan Vargas,logan.vargas36@example.com,+1 602 555 0176,Walk-in,Lip Filler,05/18/2026,2026-05-25,no_show,,$300,Asked about downtime,America/Chicago
+ethan quinn,ethan.quinn47@example.com,+17025550197,Groupon,Skin Tightening,02/04/2026,"Feb 08, 2026",lost,too pricey,300.00,Referred by a friend,America/Los_Angeles
+Lily Thompson,lily.thompson71@example.com,818-555-0144,Walk-in,HydraFacial,06/23/2026,"Jul 09, 2026",lost,too pricey,600,,America/New_York
+Tessa Gonzalez,tessa.gonzalez28@example.com,4045550124,Instagram DM,Botox,"Oct 11, 2024",2024-11-14,new,went quiet,$300,Nervous about needles,America/New_York
+Mia Cooper,mia.cooper87@example.com,(312) 555-0115,Referral,Body Contouring,08/20/2026,2026-09-11,no_show,,3200.00,,America/Chicago
+Priya Delgado,PRIYA.DELGADO56@EXAMPLE.COM,,Groupon,Body Contouring,"Apr 22, 2026",2026-04-25,lost,Not ready,"$1,500",Asked about downtime,America/Los_Angeles
+Mia Xu,mia.xu69@example.com,720-555-0169,Instagram DM,Botox,"Jun 22, 2026","Jun 27, 2026",no_show,,1200.00,Prefers afternoons,America/Chicago
+Monica Watson,monica.watson16@example.com,+1 617 555 0171,Referral,Laser Hair Removal,2025-04-27,06/05/2025,new,went quiet,$450,Referred by a friend,America/New_York
+Ella Owens,ella.owens71@example.com,+1 818 555 0101,Instagram DM,Chemical Peel,2024-08-29,"Sep 04, 2024",quote_sent,no response,1200.00,,America/Chicago
+Olivia Yoder,olivia.yoder36@example.com,+17025550178,Instagram DM,PRP Facial,"Jul 21, 2026",08/14/2026,lost,cost,$300,Prefers afternoons,America/New_York
+RYAN STEWART,ryan.stewart22@example.com,8185550105,Groupon,Chemical Peel,2025-03-11,2025-03-23,lost,,300,Interested in package deal,America/Denver
+Emma Young,emma.young38@example.com,(646) 555-0167,Walk-in,Chemical Peel,2025-03-18,2025-04-26,quote_sent,went quiet,2400,,America/Chicago
+Elena Jenkins,elena.jenkins33@example.com,+1 503 555 0159,Website Form,PRP Facial,04/20/2026,"May 14, 2026",lost,Too expensive,3200,Interested in package deal,America/Chicago
+andre vargas,andre.vargas60@example.com,+1 415 555 0199,Groupon,HydraFacial,2026-05-22,05/31/2026,no_show,,3200,,America/Los_Angeles
+Isabella Ellis,isabella.ellis64@example.com,312-555-0182,Google Ads,HydraFacial,"Nov 21, 2025","Dec 01, 2025",quote_sent,,1200.00,Prefers afternoons,America/New_York
+Marcus Anderson,marcus.anderson57@example.com,949-555-0183,Facebook Lead Ad,Laser Hair Removal,2026-05-11,"Jun 03, 2026",lost,busy at work,1500.00,,America/Denver
+Monica Evans,monica.evans49@example.com,(602) 555-0199,Instagram DM,PRP Facial,02/19/2026,2026-02-22,quote_sent,,2400.00,Wants natural look,America/Los_Angeles
+Mason Lopez,mason.lopez18@example.com,9495550110,Groupon,PRP Facial,"Apr 16, 2026",05/12/2026,lost,busy at work,800.00,,America/New_York
+Marcus Nelson,marcus.nelson91@example.com,+1 858 555 0167,Facebook Lead Ad,Skin Tightening,11/10/2024,"Nov 16, 2024",consult_booked,no response,300.00,,America/New_York
+Ava Kim,ava.kim78@example.com,+1 617 555 0190,Facebook Lead Ad,Body Contouring,06/09/2026,,new,,$300,Nervous about needles,America/New_York
+Tyler Walker,tyler.walker80@example.com,503-555-0181,Facebook Lead Ad,Body Contouring,05/30/2026,"Jun 04, 2026",quote_sent,,1200,,America/New_York
+Grace Kelly,grace.kelly40@example.com,8585550161,Instagram DM,Skin Tightening,01/17/2026,01/23/2026,quote_sent,,1500.00,,America/Los_Angeles
+Amelia Perry,amelia.perry81@example.com,858-555-0135,Referral,Chemical Peel,"Jun 22, 2026",2026-07-10,quote_sent,,"$1,200",,America/New_York
+Maya Diaz,maya.diaz10@example.com,1.917.555.0174,Groupon,Laser Hair Removal,2026-06-20,,new,,"$3,200",Referred by a friend,America/Chicago
+Emma Turner,emma.turner13@example.com,1.305.555.0127,Walk-in,Skin Tightening,04/07/2025,"May 11, 2025",consult_booked,,$450,Asked about downtime,America/Los_Angeles
+Ella Garcia,ella.garcia74@example.com,9175550103,Website Form,PRP Facial,2026-01-17,"Jan 25, 2026",quote_sent,,"$2,400",,America/Chicago
+Maya Stewart,MAYA.STEWART66@EXAMPLE.COM,+19495550151,Facebook Lead Ad,Dermal Fillers,"Jun 09, 2026",2026-06-28,no_show,,"$1,200",,America/Los_Angeles
+Elena Turner,elena.turner34@example.com,+12125550176,Groupon,HydraFacial,2026-08-02,"Aug 23, 2026",lost,Found cheaper elsewhere,800.00,,America/New_York
+Liam Ramirez,liam.ramirez54@example.com,7865550137,Website Form,Skin Tightening,01/17/2025,2025-01-19,quote_sent,no response,2400.00,Asked about downtime,America/Los_Angeles
+Jordan Patel,jordan.patel40@example.com,5035550188,Referral,Skin Tightening,06/12/2025,07/06/2025,lost,,600.00,,America/New_York
+elijah valdez,  ELIJAH.VALDEZ95@EXAMPLE.COM ,+14695550130,Website Form,Lip Filler,2025-01-23,"Feb 05, 2025",consult_booked,,1500.00,,America/Chicago
+Monica Mitchell,monica.mitchell53@example.com,+18585550117,Facebook Lead Ad,Body Contouring,12/21/2025,"Dec 23, 2025",quote_sent,,1500.00,,America/New_York
+Mason Underwood,mason.underwood52@example.com,+16175550168,Referral,Microneedling,04/03/2025,"May 12, 2025",quote_sent,went quiet,2400,,America/Los_Angeles
+Brianna Valdez,BRIANNA.VALDEZ91@EXAMPLE.COM,(702) 555-0175,Instagram DM,Lip Filler,2026-06-12,2026-07-05,no_show,,"$1,500",Asked about downtime,America/New_York
+Aiden Diaz,aiden.diaz87@example.com,+14045550103,Groupon,Lip Filler,"Jul 05, 2026",07/20/2026,lost,Not ready,300,,America/Chicago
+Brianna Foster,brianna.foster63@example.com,1.469.555.0120,Walk-in,Laser Hair Removal,2025-01-03,"Feb 03, 2025",lost,,$450,Asked about downtime,America/New_York
+Mia Nelson,mia.nelson99@example.com,+14045550163,Facebook Lead Ad,Body Contouring,2026-05-29,,new,,"$2,400",Interested in package deal,America/New_York
+Brianna Stewart,brianna.stewart9@example.com,469-555-0196,Referral,Microneedling,"Dec 27, 2025",01/13/2026,quote_sent,,600,Nervous about needles,America/Los_Angeles
+Aiden Kelly,aiden.kelly60@example.com,(858) 555-0131,Google Ads,Chemical Peel,"Jun 13, 2026","Jun 21, 2026",no_show,,450.00,,America/New_York

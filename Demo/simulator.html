@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dead lead reactivation demo | Glow Aesthetics Clinic</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --porcelain: #ECEEE9;
+    --paper: #FAFAF7;
+    --ink: #1E2B2F;
+    --ink-soft: #5B6A6E;
+    --teal: #2D7B76;
+    --mist: #DDE3DD;
+    --apricot: #E7A977;
+    --line: #CFD6CF;
+    --danger: #9B3B2F;
+    --display: "Bricolage Grotesque", "Avenir Next", "Segoe UI", sans-serif;
+    --body: "Public Sans", "Segoe UI", system-ui, sans-serif;
+    --sms: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body {
+    background: var(--porcelain);
+    color: var(--ink);
+    font-family: var(--body);
+    font-size: 16px;
+    line-height: 1.5;
+    padding: 32px 20px 48px;
+  }
+  .shell {
+    max-width: 1060px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 380px;
+    gap: 56px;
+    align-items: start;
+  }
+  h1 {
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: clamp(32px, 4.4vw, 52px);
+    line-height: 1.05;
+    letter-spacing: -0.025em;
+    margin: 0 0 16px;
+    max-width: 14em;
+  }
+  .lede { color: var(--ink-soft); max-width: 34em; margin: 0 0 28px; }
+  h2 {
+    font-family: var(--display);
+    font-weight: 500;
+    font-size: 18px;
+    margin: 0 0 10px;
+  }
+  .leads { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+  .lead {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 2px 12px;
+    text-align: left;
+    padding: 12px 14px 12px 16px;
+    border: 1px solid var(--line);
+    border-left: 4px solid transparent;
+    border-radius: 10px;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+  }
+  .lead:hover { background: rgba(255,255,255,0.55); }
+  .lead[aria-pressed="true"] { background: var(--paper); border-left-color: var(--apricot); border-color: var(--line); border-left-color: var(--apricot); }
+  .lead:focus-visible, .chip:focus-visible, .btn:focus-visible, .text-btn:focus-visible, .composer input:focus-visible, .composer button:focus-visible {
+    outline: 3px solid var(--teal);
+    outline-offset: 2px;
+  }
+  .lead .name { font-weight: 600; }
+  .lead .why { grid-column: 1; color: var(--ink-soft); font-size: 14px; }
+  .pill {
+    grid-row: 1 / span 2; grid-column: 2; align-self: center;
+    font-size: 13px; font-weight: 500;
+    padding: 3px 10px; border-radius: 999px;
+    background: var(--mist); color: var(--ink);
+    white-space: nowrap;
+  }
+  .pill.s-booked { background: var(--teal); color: #fff; }
+  .pill.s-replied { background: #CFE3DF; }
+  .pill.s-cold, .pill.s-opted_out { background: #E6DDD6; color: #6A4B3C; }
+  .note { color: var(--ink-soft); font-size: 14px; margin-top: 20px; max-width: 34em; }
+
+  /* Phone */
+  .phone {
+    background: var(--ink);
+    border-radius: 38px;
+    padding: 12px;
+    box-shadow: 0 18px 40px rgba(30,43,47,0.22);
+    position: sticky; top: 24px;
+  }
+  .screen {
+    background: var(--paper);
+    border-radius: 28px;
+    height: min(720px, calc(100vh - 80px));
+    min-height: 520px;
+    display: grid;
+    grid-template-rows: auto auto 1fr auto auto;
+    overflow: hidden;
+    font-family: var(--sms);
+  }
+  .bar { padding: 16px 18px 12px; border-bottom: 1px solid var(--line); display: grid; grid-template-columns: 40px 1fr auto; gap: 12px; align-items: center; }
+  .avatar { width: 40px; height: 40px; border-radius: 50%; background: var(--teal); color: #fff; display: grid; place-items: center; font-family: var(--display); font-weight: 700; font-size: 18px; }
+  .bar .who { font-weight: 600; font-size: 16px; line-height: 1.2; }
+  .bar .sub { font-size: 13px; color: var(--ink-soft); line-height: 1.3; }
+  .text-btn { background: none; border: 0; color: var(--teal); font: inherit; font-size: 14px; font-weight: 600; cursor: pointer; padding: 4px 6px; border-radius: 6px; }
+  .text-btn[disabled] { color: var(--ink-soft); cursor: default; }
+  .banner { margin: 0; padding: 8px 16px; font-size: 13px; background: #F3DDD8; color: var(--danger); display: none; }
+  .banner.show { display: block; }
+  .thread { overflow-y: auto; padding: 16px 14px; display: flex; flex-direction: column; gap: 6px; scroll-behavior: smooth; }
+  .msg { max-width: 82%; display: flex; flex-direction: column; }
+  .msg.mia { align-self: flex-start; }
+  .msg.me { align-self: flex-end; align-items: flex-end; }
+  .bubble { padding: 9px 14px; border-radius: 18px; font-size: 15.5px; line-height: 1.4; white-space: pre-wrap; overflow-wrap: anywhere; }
+  .mia .bubble { background: var(--mist); border-bottom-left-radius: 6px; }
+  .me .bubble { background: var(--teal); color: #fff; border-bottom-right-radius: 6px; }
+  .time { font-size: 11.5px; color: var(--ink-soft); margin: 2px 6px 6px; }
+  .typing { align-self: flex-start; background: var(--mist); border-radius: 18px; border-bottom-left-radius: 6px; padding: 12px 16px; display: inline-flex; gap: 5px; }
+  .typing span { width: 7px; height: 7px; border-radius: 50%; background: var(--ink-soft); animation: blink 1.2s infinite ease-in-out; }
+  .typing span:nth-child(2) { animation-delay: .18s; }
+  .typing span:nth-child(3) { animation-delay: .36s; }
+  @keyframes blink { 0%, 80%, 100% { opacity: .25; transform: translateY(0); } 40% { opacity: 1; transform: translateY(-3px); } }
+  .empty { margin: auto; text-align: center; padding: 0 20px; color: var(--ink-soft); font-size: 15px; }
+  .empty p { margin: 0 0 14px; }
+  .btn { background: var(--teal); color: #fff; border: 0; border-radius: 999px; font: inherit; font-weight: 600; padding: 10px 18px; cursor: pointer; }
+  .btn[disabled] { opacity: .55; cursor: default; }
+  .system-note { align-self: center; text-align: center; font-size: 13px; color: var(--ink-soft); background: #fff; border: 1px solid var(--line); border-radius: 12px; padding: 8px 12px; margin: 6px 0; max-width: 90%; }
+  .booked { margin: 0 14px 10px; border: 1px solid var(--teal); border-radius: 14px; padding: 10px 14px; background: #fff; font-size: 14px; display: none; }
+  .booked.show { display: block; }
+  .booked strong { display: block; color: var(--teal); }
+  .chips { padding: 0 14px 8px; display: flex; flex-wrap: wrap; gap: 6px; }
+  .chip { border: 1px solid var(--line); background: #fff; color: var(--ink); border-radius: 999px; font: inherit; font-size: 13px; padding: 5px 11px; cursor: pointer; }
+  .chip:hover { border-color: var(--teal); }
+  .composer { display: grid; grid-template-columns: 1fr auto; gap: 8px; padding: 10px 14px 16px; border-top: 1px solid var(--line); background: var(--paper); }
+  .composer input { font: inherit; font-size: 15.5px; border: 1px solid var(--line); border-radius: 999px; padding: 10px 16px; background: #fff; color: var(--ink); min-width: 0; }
+  .composer input:disabled { background: #F1F2EE; }
+  .composer button { border: 0; border-radius: 999px; background: var(--teal); color: #fff; font: inherit; font-weight: 600; padding: 0 18px; cursor: pointer; }
+  .composer button[disabled] { opacity: .5; cursor: default; }
+  .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+  @media (max-width: 880px) {
+    .shell { grid-template-columns: 1fr; gap: 28px; }
+    .phone { position: static; max-width: 420px; margin: 0 auto; width: 100%; }
+    .screen { height: 620px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .typing span { animation: none; opacity: .7; }
+    .thread { scroll-behavior: auto; }
+  }
+</style>
+</head>
+<body>
+<div class="shell">
+  <main>
+    <h1>Bring a quiet lead back into the conversation.</h1>
+    <p class="lede">These are demo leads from an old clinic database. Pick one and Mia, the clinic's AI assistant, will text them first. You reply as the lead: ask a question, push back, or book a consultation.</p>
+
+    <h2 id="leads-h">Leads waiting in the database</h2>
+    <ul class="leads" id="leads" aria-labelledby="leads-h">
+      <li class="note">Loading leads...</li>
+    </ul>
+    <p class="note">Everything here is demo data. No real people are contacted. Bookings land on a test calendar, and each reply is saved to a database so the AI remembers the conversation.</p>
+  </main>
+
+  <section class="phone" aria-label="Text message conversation">
+    <div class="screen">
+      <header class="bar">
+        <div class="avatar" aria-hidden="true">G</div>
+        <div>
+          <div class="who" id="who">Glow Aesthetics Clinic</div>
+          <div class="sub" id="sub">Choose a lead to begin</div>
+        </div>
+        <button class="text-btn" id="reset" type="button" disabled>Start over</button>
+      </header>
+      <p class="banner" id="banner" role="alert"></p>
+      <div class="thread" id="thread" aria-live="polite">
+        <div class="empty"><p>Pick a lead on the left to see their conversation.</p></div>
+      </div>
+      <div class="booked" id="booked"></div>
+      <div class="chips" id="chips"></div>
+      <form class="composer" id="composer" autocomplete="off">
+        <label class="sr" for="msg">Your reply</label>
+        <input id="msg" type="text" placeholder="Reply as the lead" disabled>
+        <button type="submit" id="send" disabled>Send</button>
+      </form>
+    </div>
+  </section>
+</div>
+
+<script>
+  // The base address of your published n8n webhooks.
+  var API = "https://justin-brnldz.app.n8n.cloud/webhook";
+
+  var SEGMENTS = {
+    consult_no_show: "Booked a consultation, didn't come",
+    quote_ghosted: "Went quiet after a quote",
+    price_objection: "Left because of price",
+    bad_timing: "Said the timing wasn't right",
+    never_contacted: "Inquired, never got a follow-up",
+    old_inquiry: "Last heard from a year ago"
+  };
+  var STATUS = {
+    imported: "Waiting", segmented: "Waiting", queued: "Starting", contacted: "Texted",
+    replied: "In conversation", engaged: "In conversation", booked: "Booked",
+    cold: "Gone cold", opted_out: "Opted out", human_takeover: "With a person"
+  };
+  var CHIPS = ["How much does it cost?", "What times do you have this week?", "Is there any downtime?", "STOP"];
+
+  var state = { leads: [], id: null, thread: null, pending: null, waiting: null, timer: null };
+  var $ = function (id) { return document.getElementById(id); };
+
+  function request(path, options) {
+    return fetch(API + path, options).then(function (res) {
+      if (!res.ok) { throw new Error("The server answered " + res.status); }
+      return res.text();
+    }).then(function (text) { return text ? JSON.parse(text) : null; });
+  }
+  function postJson(path, body) {
+    return request(path, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) });
+  }
+  function showError(message) {
+    var b = $("banner");
+    b.textContent = message || "";
+    b.classList.toggle("show", !!message);
+  }
+  function friendlyError(err) {
+    return "Can't reach the demo server. Check that the n8n workflows are published, then try again. (" + (err && err.message ? err.message : "network error") + ")";
+  }
+  function fullName(l) { return (l.first_name + " " + (l.last_name || "")).trim(); }
+  function timeLabel(iso) {
+    try { return new Date(iso).toLocaleTimeString([], { hour: "numeric", minute: "2-digit" }); } catch (e) { return ""; }
+  }
+
+  function renderLeads() {
+    var ul = $("leads");
+    ul.innerHTML = "";
+    if (!state.leads.length) {
+      ul.innerHTML = '<li class="note">No demo leads found. Check that leads are marked is_demo in the database.</li>';
+      return;
+    }
+    state.leads.forEach(function (l) {
+      var li = document.createElement("li");
+      var btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "lead";
+      btn.setAttribute("aria-pressed", String(l.id === state.id));
+      btn.innerHTML = '<span class="name"></span><span class="pill"></span><span class="why"></span>';
+      btn.querySelector(".name").textContent = fullName(l) + (l.service_interest ? " (" + l.service_interest + ")" : "");
+      btn.querySelector(".why").textContent = SEGMENTS[l.segment] || l.segment;
+      var pill = btn.querySelector(".pill");
+      pill.textContent = STATUS[l.status] || l.status;
+      pill.classList.add("s-" + l.status);
+      btn.addEventListener("click", function () { selectLead(l.id); });
+      li.appendChild(btn);
+      ul.appendChild(li);
+    });
+  }
+
+  function currentMessages() {
+    var msgs = state.thread && state.thread.messages ? state.thread.messages.slice() : [];
+    if (state.pending) {
+      var lastInbound = null;
+      for (var i = msgs.length - 1; i >= 0; i--) { if (msgs[i].direction === "inbound") { lastInbound = msgs[i]; break; } }
+      if (!lastInbound || lastInbound.body !== state.pending.text) {
+        msgs.push({ direction: "inbound", body: state.pending.text, created_at: new Date(state.pending.since).toISOString() });
+      }
+    }
+    return msgs;
+  }
+
+  function renderThread() {
+    var box = $("thread");
+    var nearBottom = box.scrollHeight - box.scrollTop - box.clientHeight < 80;
+    var t = state.thread;
+    box.innerHTML = "";
+    if (!t || !t.lead) {
+      box.innerHTML = '<div class="empty"><p>Pick a lead on the left to see their conversation.</p></div>';
+      return renderChrome();
+    }
+    var msgs = currentMessages();
+    if (!msgs.length && !state.waiting) {
+      var empty = document.createElement("div");
+      empty.className = "empty";
+      empty.innerHTML = "<p>No texts yet. This lead is sitting in the database.</p>";
+      var b = document.createElement("button");
+      b.type = "button"; b.className = "btn"; b.textContent = "Have Mia send the first text";
+      b.addEventListener("click", startConversation);
+      empty.appendChild(b);
+      box.appendChild(empty);
+    }
+    msgs.forEach(function (m) {
+      var wrap = document.createElement("div");
+      wrap.className = "msg " + (m.direction === "outbound" ? "mia" : "me");
+      var bub = document.createElement("div");
+      bub.className = "bubble";
+      bub.textContent = m.body;
+      var time = document.createElement("div");
+      time.className = "time";
+      time.textContent = timeLabel(m.created_at);
+      wrap.appendChild(bub); wrap.appendChild(time);
+      box.appendChild(wrap);
+    });
+    if (state.waiting) {
+      var typing = document.createElement("div");
+      typing.className = "typing";
+      typing.setAttribute("aria-label", "Mia is typing");
+      typing.innerHTML = "<span></span><span></span><span></span>";
+      box.appendChild(typing);
+    }
+    if (state.note) {
+      var n = document.createElement("div");
+      n.className = "system-note";
+      n.textContent = state.note;
+      box.appendChild(n);
+    }
+    if (nearBottom || state.waiting || state.pending) { box.scrollTop = box.scrollHeight; }
+    renderChrome();
+  }
+
+  function renderChrome() {
+    var t = state.thread;
+    var lead = t && t.lead;
+    $("who").textContent = lead ? "Glow Aesthetics Clinic" : "Glow Aesthetics Clinic";
+    $("sub").textContent = lead ? "Texting " + lead.first_name + " | " + (STATUS[lead.status] || lead.status) : "Choose a lead to begin";
+    $("reset").disabled = !lead || !!state.waiting;
+
+    var booked = $("booked");
+    if (t && t.booking && t.booking.starts_at) {
+      var when;
+      try {
+        when = new Date(t.booking.starts_at).toLocaleString("en-US", { timeZone: "America/New_York", weekday: "long", month: "long", day: "numeric", hour: "numeric", minute: "2-digit" }) + " Eastern";
+      } catch (e) { when = t.booking.starts_at; }
+      booked.innerHTML = "<strong>Consultation booked</strong>" + when;
+      booked.classList.add("show");
+    } else {
+      booked.classList.remove("show");
+      booked.textContent = "";
+    }
+
+    var msgs = currentMessages();
+    var canReply = !!lead && msgs.length > 0 && !state.waiting;
+    $("msg").disabled = !canReply;
+    $("send").disabled = !canReply;
+    var chips = $("chips");
+    chips.innerHTML = "";
+    if (canReply) {
+      CHIPS.forEach(function (c) {
+        var b = document.createElement("button");
+        b.type = "button"; b.className = "chip"; b.textContent = c;
+        b.addEventListener("click", function () { sendMessage(c); });
+        chips.appendChild(b);
+      });
+    }
+  }
+
+  function updateLeadInList() {
+    if (!state.thread || !state.thread.lead) { return; }
+    state.leads.forEach(function (l) { if (l.id === state.thread.lead.id) { l.status = state.thread.lead.status; } });
+    renderLeads();
+  }
+
+  function loadThread() {
+    var id = state.id;
+    if (!id) { return Promise.resolve(); }
+    return request("/dbr-thread?lead_id=" + encodeURIComponent(id)).then(function (data) {
+      if (id !== state.id) { return; }
+      var r = data && (data.result || data);
+      if (typeof r === "string") { r = JSON.parse(r); }
+      if (!r || !r.lead) { throw new Error("That lead isn't available in the demo"); }
+      state.thread = r;
+      if (state.waiting === "opener" && r.messages && r.messages.length) { state.waiting = null; }
+      showError("");
+      updateLeadInList();
+      renderThread();
+    }).catch(function (err) { showError(friendlyError(err)); });
+  }
+
+  function startPolling() {
+    stopPolling();
+    state.timer = setInterval(function () {
+      if (document.hidden || state.waiting === "reply") { return; }
+      loadThread();
+    }, 2500);
+  }
+  function stopPolling() { if (state.timer) { clearInterval(state.timer); state.timer = null; } }
+
+  function selectLead(id) {
+    state.id = id; state.thread = null; state.pending = null; state.waiting = null; state.note = "";
+    showError("");
+    renderLeads(); renderThread();
+    loadThread().then(startPolling);
+  }
+
+  function startConversation() {
+    if (!state.id) { return; }
+    var id = state.id;
+    state.waiting = "opener"; state.note = "";
+    renderThread();
+    postJson("/dbr-start", { lead_id: id }).then(function () {
+      var tries = 0;
+      (function check() {
+        if (id !== state.id || state.waiting !== "opener") { return; }
+        loadThread().then(function () {
+          if (state.waiting === "opener" && ++tries < 30) { setTimeout(check, 2000); }
+          else if (state.waiting === "opener") {
+            state.waiting = null;
+            showError("Mia hasn't sent the first text yet. Check the Executions tab of the Campaign Controller workflow in n8n.");
+            renderThread();
+          }
+        });
+      })();
+    }).catch(function (err) { state.waiting = null; showError(friendlyError(err)); renderThread(); });
+  }
+
+  function sendMessage(text) {
+    text = (text || "").trim();
+    if (!text || !state.id || state.waiting) { return; }
+    var id = state.id;
+    state.pending = { text: text, since: Date.now() };
+    state.waiting = "reply"; state.note = "";
+    $("msg").value = "";
+    renderThread();
+    postJson("/dbr-inbound", { lead_id: id, message: text }).then(function (r) {
+      if (id !== state.id) { return; }
+      if (r && r.action === "no_ai_reply") {
+        state.note = "Mia doesn't reply here. This lead has opted out or a person has taken over the conversation.";
+      }
+      showError("");
+    }).catch(function (err) {
+      showError(friendlyError(err));
+    }).then(function () {
+      if (id !== state.id) { return; }
+      state.pending = null; state.waiting = null;
+      return loadThread();
+    });
+  }
+
+  function resetLead() {
+    if (!state.id) { return; }
+    var id = state.id;
+    stopPolling();
+    state.waiting = "reset";
+    renderChrome();
+    postJson("/dbr-reset", { lead_id: id }).then(function () {
+      state.pending = null; state.waiting = null; state.note = "";
+      return loadThread();
+    }).catch(function (err) { state.waiting = null; showError(friendlyError(err)); renderThread(); }).then(startPolling);
+  }
+
+  $("composer").addEventListener("submit", function (e) { e.preventDefault(); sendMessage($("msg").value); });
+  $("reset").addEventListener("click", resetLead);
+
+  request("/dbr-leads").then(function (data) {
+    state.leads = Array.isArray(data) ? data : (data ? [data] : []);
+    renderLeads();
+  }).catch(function (err) {
+    $("leads").innerHTML = '<li class="note"></li>';
+    $("leads").firstChild.textContent = friendlyError(err);
+  });
+</script>
+</body>
+</html>

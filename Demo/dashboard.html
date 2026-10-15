@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Campaign results | Dead lead reactivation | Glow Aesthetics Clinic</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --porcelain: #ECEEE9;
+    --paper: #FAFAF7;
+    --ink: #1E2B2F;
+    --ink-soft: #5B6A6E;
+    --teal: #2D7B76;
+    --teal-soft: #9CC5C1;
+    --mist: #DDE3DD;
+    --apricot: #E7A977;
+    --line: #CFD6CF;
+    --danger: #9B3B2F;
+    --display: "Bricolage Grotesque", "Avenir Next", "Segoe UI", sans-serif;
+    --body: "Public Sans", "Segoe UI", system-ui, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body { background: var(--porcelain); color: var(--ink); font-family: var(--body); font-size: 16px; line-height: 1.5; padding: 28px 20px 64px; }
+  .page { max-width: 920px; margin: 0 auto; }
+  .top { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; flex-wrap: wrap; margin-bottom: 44px; }
+  .brand { font-family: var(--display); font-weight: 700; font-size: 18px; }
+  .top a, .text-btn { color: var(--teal); font: inherit; font-weight: 600; text-decoration: underline; text-underline-offset: 3px; background: none; border: 0; cursor: pointer; padding: 2px 4px; border-radius: 4px; }
+  a:focus-visible, button:focus-visible { outline: 3px solid var(--teal); outline-offset: 2px; }
+  h1 { font-family: var(--display); font-weight: 700; font-size: clamp(28px, 4.2vw, 46px); line-height: 1.12; letter-spacing: -0.02em; margin: 0 0 14px; max-width: 22em; }
+  .sample { color: var(--ink-soft); font-size: 14.5px; max-width: 42em; margin: 0 0 32px; padding-left: 12px; border-left: 3px solid var(--apricot); }
+  .ledger { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px 28px; margin: 0 0 56px; padding: 0; }
+  .ledger div { min-width: 0; }
+  .ledger dt { color: var(--ink-soft); font-size: 14px; order: 2; }
+  .ledger dd { margin: 0; font-family: var(--display); font-weight: 700; font-size: 30px; line-height: 1.1; letter-spacing: -0.01em; }
+  .ledger div { display: flex; flex-direction: column; }
+  section { margin-bottom: 52px; }
+  h2 { font-family: var(--display); font-weight: 500; font-size: 21px; letter-spacing: -0.005em; margin: 0 0 6px; }
+  .hint { color: var(--ink-soft); font-size: 14.5px; margin: 0 0 18px; max-width: 44em; }
+
+  .funnel { display: grid; gap: 10px; }
+  .step { display: grid; grid-template-columns: 150px 1fr; gap: 14px; align-items: center; }
+  .step .label { font-size: 15px; }
+  .track { background: rgba(255,255,255,0.55); border-radius: 8px; height: 38px; position: relative; overflow: hidden; }
+  .fill { height: 100%; border-radius: 8px; display: flex; align-items: center; padding: 0 12px; font-weight: 600; font-size: 15px; min-width: 56px; white-space: nowrap; transition: width .6s ease; }
+  .fill small { font-weight: 400; margin-left: 8px; font-size: 13px; opacity: .85; }
+
+  .table-wrap { overflow-x: auto; }
+  table { width: 100%; border-collapse: collapse; min-width: 640px; font-size: 15px; }
+  th { text-align: left; font-weight: 600; color: var(--ink-soft); font-size: 13.5px; padding: 0 10px 8px 0; border-bottom: 1px solid var(--ink); }
+  td { padding: 11px 10px 11px 0; border-bottom: 1px solid var(--line); vertical-align: middle; }
+  td.num, th.num { text-align: right; padding-right: 18px; font-variant-numeric: tabular-nums; }
+  .rate { display: flex; align-items: center; gap: 10px; min-width: 150px; }
+  .rate .bar { flex: 1; height: 8px; background: var(--mist); border-radius: 4px; overflow: hidden; }
+  .rate .bar i { display: block; height: 100%; background: var(--teal); border-radius: 4px; }
+  .rate span { width: 42px; text-align: right; font-variant-numeric: tabular-nums; }
+
+  .charts { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+  .chart h3 { font-family: var(--body); font-weight: 600; font-size: 15px; margin: 0 0 8px; }
+  .legend { display: flex; gap: 16px; font-size: 13.5px; color: var(--ink-soft); margin-bottom: 6px; }
+  .legend span::before { content: ""; display: inline-block; width: 10px; height: 10px; border-radius: 3px; margin-right: 6px; background: var(--c); }
+  svg { width: 100%; height: auto; display: block; }
+  svg text { font-family: var(--body); font-size: 11px; fill: var(--ink-soft); }
+
+  .feed { list-style: none; margin: 0; padding: 0; }
+  .feed li { display: grid; grid-template-columns: 96px 1fr; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--line); font-size: 15px; }
+  .feed time { color: var(--ink-soft); font-size: 14px; }
+
+  .status { color: var(--ink-soft); font-size: 14px; margin-top: 8px; }
+  .error { color: var(--danger); background: #F3DDD8; padding: 10px 14px; border-radius: 8px; font-size: 14.5px; display: none; margin-bottom: 24px; }
+  .error.show { display: block; }
+
+  @media (max-width: 760px) {
+    .ledger { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .charts { grid-template-columns: 1fr; }
+    .step { grid-template-columns: 1fr; gap: 4px; }
+    .feed li { grid-template-columns: 1fr; gap: 0; }
+  }
+  @media (prefers-reduced-motion: reduce) { .fill { transition: none; } }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="top">
+    <span class="brand">Glow Aesthetics Clinic</span>
+    <a id="demo-link" href="simulator.html">Try the live conversation demo</a>
+  </div>
+
+  <div class="error" id="error" role="alert"></div>
+
+  <h1 id="headline">Loading campaign results...</h1>
+  <p class="sample">Sample campaign. These results are simulated for a demo database of 432 old leads, to show what the reporting looks like. The conversations on the demo page are live.</p>
+
+  <dl class="ledger" id="ledger"></dl>
+
+  <section aria-labelledby="funnel-h">
+    <h2 id="funnel-h">From dormant lead to booked consultation</h2>
+    <p class="hint">Each bar is the number of leads that reached that stage. The percentage is the share of the stage before it.</p>
+    <div class="funnel" id="funnel"></div>
+  </section>
+
+  <section aria-labelledby="seg-h">
+    <h2 id="seg-h">Results by type of lead</h2>
+    <p class="hint">Each type of lead gets its own message approach. Leads who just went quiet after a quote or a missed consultation respond best; year-old inquiries respond least.</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr>
+          <th scope="col">Lead type</th>
+          <th scope="col" class="num">Leads</th>
+          <th scope="col" class="num">Texted</th>
+          <th scope="col">Reply rate</th>
+          <th scope="col" class="num">Booked</th>
+          <th scope="col" class="num">Booked value</th>
+        </tr></thead>
+        <tbody id="segments"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section aria-labelledby="days-h">
+    <h2 id="days-h">The last 14 days</h2>
+    <p class="hint">Texts go out in small batches during each lead's daytime hours. Replies and bookings follow within a day or two.</p>
+    <div class="charts">
+      <div class="chart">
+        <h3>Texts sent each day</h3>
+        <div id="chart-texts" role="img" aria-label="Bar chart of texts sent each day"></div>
+      </div>
+      <div class="chart">
+        <h3>Replies and bookings each day</h3>
+        <div class="legend"><span style="--c: var(--teal)">Replies</span><span style="--c: var(--apricot)">Bookings</span></div>
+        <div id="chart-replies" role="img" aria-label="Bar chart of replies and bookings each day"></div>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="feed-h">
+    <h2 id="feed-h">Latest activity</h2>
+    <ul class="feed" id="feed"></ul>
+    <p class="status"><span id="updated">Not updated yet.</span> <button class="text-btn" id="refresh" type="button">Refresh now</button></p>
+  </section>
+</div>
+
+<script>
+  var API = "https://justin-brnldz.app.n8n.cloud/webhook";
+  var DEMO_URL = "simulator.html";   // change this to the address of your chat demo page
+
+  var SEGMENTS = {
+    consult_no_show: "Missed a consultation",
+    quote_ghosted: "Went quiet after a quote",
+    price_objection: "Left over price",
+    bad_timing: "Timing wasn't right",
+    never_contacted: "Never got a follow-up",
+    old_inquiry: "Inquired a year ago"
+  };
+  var $ = function (id) { return document.getElementById(id); };
+  $("demo-link").setAttribute("href", DEMO_URL);
+
+  function fmt(n) { return Number(n || 0).toLocaleString("en-US"); }
+  function money(n) { return "$" + Math.round(Number(n || 0)).toLocaleString("en-US"); }
+  function pct(a, b) { return b > 0 ? Math.round((a / b) * 1000) / 10 : 0; }
+  function pctText(a, b) { var p = pct(a, b); return (p % 1 === 0 ? p.toFixed(0) : p.toFixed(1)) + "%"; }
+  function el(tag, cls, text) { var e = document.createElement(tag); if (cls) { e.className = cls; } if (text != null) { e.textContent = text; } return e; }
+  function showError(msg) { var e = $("error"); e.textContent = msg || ""; e.classList.toggle("show", !!msg); }
+
+  function renderHeadline(k) {
+    $("headline").textContent = "Mia texted " + fmt(k.contacted) + " of " + fmt(k.eligible) +
+      " dormant leads and booked " + fmt(k.booked) + " consultations, about " + money(k.pipeline) + " in treatment value.";
+  }
+
+  function renderLedger(k) {
+    var items = [
+      [fmt(k.texts_sent), "texts sent, including follow-ups"],
+      [pctText(k.replied, k.contacted), "of leads texted replied"],
+      [pctText(k.booked, k.contacted), "of leads texted booked"],
+      [pctText(k.opted_out, k.contacted), "opted out"]
+    ];
+    var dl = $("ledger");
+    dl.innerHTML = "";
+    items.forEach(function (it) {
+      var d = el("div");
+      d.appendChild(el("dd", null, it[0]));
+      d.appendChild(el("dt", null, it[1]));
+      dl.appendChild(d);
+    });
+  }
+
+  function renderFunnel(k) {
+    var steps = [
+      { label: "Dormant leads", count: k.eligible, of: null, note: "", bg: "var(--mist)", fg: "var(--ink)" },
+      { label: "Texted", count: k.contacted, of: k.eligible, note: "of all leads", bg: "var(--teal-soft)", fg: "var(--ink)" },
+      { label: "Replied", count: k.replied, of: k.contacted, note: "of those texted", bg: "var(--teal)", fg: "#fff" },
+      { label: "Booked", count: k.booked, of: k.replied, note: "of those who replied", bg: "var(--apricot)", fg: "var(--ink)" }
+    ];
+    var box = $("funnel");
+    box.innerHTML = "";
+    steps.forEach(function (s) {
+      var row = el("div", "step");
+      row.appendChild(el("div", "label", s.label));
+      var track = el("div", "track");
+      var fill = el("div", "fill");
+      fill.style.width = (k.eligible > 0 ? Math.max(0, (s.count / k.eligible) * 100) : 0) + "%";
+      fill.style.background = s.bg;
+      fill.style.color = s.fg;
+      fill.appendChild(document.createTextNode(fmt(s.count)));
+      if (s.of != null) { fill.appendChild(el("small", null, pctText(s.count, s.of) + " " + s.note)); }
+      track.appendChild(fill);
+      row.appendChild(track);
+      box.appendChild(row);
+    });
+  }
+
+  function renderSegments(rows) {
+    var body = $("segments");
+    body.innerHTML = "";
+    rows.forEach(function (r) {
+      var tr = el("tr");
+      tr.appendChild(el("td", null, SEGMENTS[r.segment] || r.segment));
+      tr.appendChild(el("td", "num", fmt(r.leads)));
+      tr.appendChild(el("td", "num", fmt(r.contacted)));
+      var rateCell = el("td");
+      var rate = el("div", "rate");
+      var bar = el("div", "bar");
+      var fill = document.createElement("i");
+      fill.style.width = Math.min(100, pct(r.replied, r.contacted)) + "%";
+      bar.appendChild(fill);
+      rate.appendChild(bar);
+      rate.appendChild(el("span", null, pctText(r.replied, r.contacted)));
+      rateCell.appendChild(rate);
+      tr.appendChild(rateCell);
+      tr.appendChild(el("td", "num", fmt(r.booked)));
+      tr.appendChild(el("td", "num", money(r.pipeline)));
+      body.appendChild(tr);
+    });
+  }
+
+  function dayLabel(iso) {
+    var p = String(iso).slice(0, 10).split("-");
+    var names = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+    return names[Number(p[1]) - 1] + " " + Number(p[2]);
+  }
+
+  function drawBars(target, days, series) {
+    var W = 420, H = 190, L = 30, R = 6, T = 8, B = 28;
+    var max = 1;
+    days.forEach(function (d) { series.forEach(function (s) { max = Math.max(max, Number(d[s.key]) || 0); }); });
+    var step = max <= 5 ? 1 : max <= 12 ? 2 : max <= 30 ? 5 : max <= 60 ? 10 : 20;
+    var top = Math.ceil(max / step) * step;
+    var plotW = W - L - R, plotH = H - T - B;
+    var group = plotW / days.length;
+    var barW = Math.max(3, (group - 5) / series.length);
+    var svg = '<svg viewBox="0 0 ' + W + " " + H + '" aria-hidden="true">';
+    for (var v = 0; v <= top; v += step) {
+      var y = T + plotH - (v / top) * plotH;
+      svg += '<line x1="' + L + '" x2="' + (W - R) + '" y1="' + y + '" y2="' + y + '" stroke="#CFD6CF" stroke-width="1"/>';
+      svg += '<text x="' + (L - 6) + '" y="' + (y + 4) + '" text-anchor="end">' + v + "</text>";
+    }
+    days.forEach(function (d, i) {
+      var gx = L + i * group + 2.5;
+      series.forEach(function (s, j) {
+        var val = Number(d[s.key]) || 0;
+        var h = (val / top) * plotH;
+        svg += '<rect x="' + (gx + j * barW) + '" y="' + (T + plotH - h) + '" width="' + (barW - 1) + '" height="' + h + '" rx="2" fill="' + s.color + '"><title>' + dayLabel(d.day) + ": " + val + " " + s.name + "</title></rect>";
+      });
+      if (i % 3 === 0 || i === days.length - 1) {
+        svg += '<text x="' + (L + i * group + group / 2) + '" y="' + (H - 8) + '" text-anchor="middle">' + dayLabel(d.day) + "</text>";
+      }
+    });
+    svg += "</svg>";
+    target.innerHTML = svg;
+  }
+
+  function ago(iso) {
+    var s = Math.max(0, (Date.now() - new Date(iso).getTime()) / 1000);
+    if (s < 90) { return "just now"; }
+    if (s < 3600) { return Math.round(s / 60) + " minutes ago"; }
+    if (s < 86400) { var h = Math.round(s / 3600); return h + (h === 1 ? " hour ago" : " hours ago"); }
+    var d = Math.round(s / 86400); return d + (d === 1 ? " day ago" : " days ago");
+  }
+
+  function renderFeed(rows) {
+    var ul = $("feed");
+    ul.innerHTML = "";
+    rows.forEach(function (r) {
+      var kind = SEGMENTS[r.segment] ? " (" + SEGMENTS[r.segment].toLowerCase() + ")" : "";
+      var text;
+      if (r.event_type === "booked") { text = r.first_name + " booked a consultation" + kind; }
+      else if (r.event_type === "opted_out") { text = r.first_name + " opted out" + kind; }
+      else if (r.event_type === "marked_cold") { text = r.first_name + " went cold after no reply" + kind; }
+      else if (r.event_type === "followup_sent") { text = "Mia followed up with " + r.first_name + kind; }
+      else { text = "Mia texted " + r.first_name + kind; }
+      var li = el("li");
+      li.appendChild(el("time", null, ago(r.created_at)));
+      li.appendChild(el("span", null, text));
+      ul.appendChild(li);
+    });
+    if (!rows.length) { ul.appendChild(el("li", null, "No activity yet.")); }
+  }
+
+  function render(data) {
+    var k = data.kpis;
+    renderHeadline(k);
+    renderLedger(k);
+    renderFunnel(k);
+    renderSegments(data.segments || []);
+    var days = data.daily || [];
+    drawBars($("chart-texts"), days, [{ key: "texts", name: "texts", color: "#9CC5C1" }]);
+    drawBars($("chart-replies"), days, [{ key: "replies", name: "replies", color: "#2D7B76" }, { key: "bookings", name: "bookings", color: "#E7A977" }]);
+    renderFeed(data.recent || []);
+    $("updated").textContent = "Updated " + new Date().toLocaleTimeString([], { hour: "numeric", minute: "2-digit" }) + ".";
+  }
+
+  function load() {
+    return fetch(API + "/dbr-stats").then(function (res) {
+      if (!res.ok) { throw new Error("The server answered " + res.status); }
+      return res.text();
+    }).then(function (text) {
+      var data = JSON.parse(text);
+      var r = data && (data.result || data);
+      if (typeof r === "string") { r = JSON.parse(r); }
+      if (!r || !r.kpis) { throw new Error("The results came back in an unexpected shape"); }
+      showError("");
+      render(r);
+    }).catch(function (err) {
+      showError("Can't load the results. Check that the Simulator API workflow is published in n8n and allows requests from this page. (" + (err && err.message ? err.message : "network error") + ")");
+      if ($("headline").textContent.indexOf("Loading") === 0) { $("headline").textContent = "Campaign results"; }
+    });
+  }
+
+  $("refresh").addEventListener("click", load);
+  load();
+  setInterval(function () { if (!document.hidden) { load(); } }, 30000);
+</script>
+</body>
+</html>

@@ -1,0 +1,289 @@
+{
+  "name": "DBR - 3 Follow-ups",
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        -224
+      ],
+      "id": "ec3e0acf-eb80-4659-bc1d-eaa5f71a8107",
+      "name": "When clicking ‘Execute workflow’"
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "minutes",
+              "minutesInterval": 15
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.4,
+      "position": [
+        0,
+        64
+      ],
+      "id": "884447c4-1a1f-40ba-8d48-3e423438a395",
+      "name": "Schedule Trigger",
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "WITH c AS (\n  UPDATE leads l\n  SET status = 'cold', updated_at = now()\n  FROM segment_playbook p\n  WHERE p.segment = l.segment\n    AND l.status = 'contacted'\n    AND l.next_action_at <= now()\n    AND l.followup_count >= p.max_followups\n    AND (l.last_inbound_at IS NULL OR l.last_inbound_at < l.last_outbound_at)\n  RETURNING l.id\n)\nINSERT INTO lead_events (lead_id, event_type)\nSELECT id, 'marked_cold' FROM c\nRETURNING id;",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.postgres",
+      "typeVersion": 2.7,
+      "position": [
+        224,
+        -176
+      ],
+      "id": "ea816fa8-8e55-4d69-9e71-4979af20d5b1",
+      "name": "Mark Cold",
+      "alwaysOutputData": true,
+      "credentials": {
+        "postgres": {
+          "id": "XMsiI3y2vZcn0CdC",
+          "name": "Supabase DBR"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "SELECT l.id AS lead_id, l.first_name, l.segment, l.service_interest,\n       l.channel_pref AS channel, l.followup_count,\n       p.angle, p.max_followups, c.business_name, c.sender_name,\n       (SELECT body FROM messages m\n        WHERE m.lead_id = l.id AND m.direction = 'outbound'\n        ORDER BY m.created_at DESC LIMIT 1) AS last_message\nFROM leads l\nJOIN segment_playbook p ON p.segment = l.segment\nCROSS JOIN campaign_settings c\nWHERE c.is_active\n  AND l.status = 'contacted'\n  AND NOT l.opted_out AND NOT l.ai_paused\n  AND l.next_action_at <= now()\n  AND l.followup_count < p.max_followups\n  AND (l.last_inbound_at IS NULL OR l.last_inbound_at < l.last_outbound_at)\n  AND extract(hour FROM now() AT TIME ZONE l.timezone) >= c.send_start_hour\n  AND extract(hour FROM now() AT TIME ZONE l.timezone) <  c.send_end_hour\nORDER BY l.next_action_at\nLIMIT 1;",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.postgres",
+      "typeVersion": 2.7,
+      "position": [
+        224,
+        16
+      ],
+      "id": "da685856-167b-4b2c-9f47-711fb5409c4c",
+      "name": "Find Due Follow-up",
+      "credentials": {
+        "postgres": {
+          "id": "XMsiI3y2vZcn0CdC",
+          "name": "Supabase DBR"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "86388019-9799-43c2-8ea8-5f04abbc2907",
+              "name": "=sessionId",
+              "value": "={{ $json.lead_id }}",
+              "type": "string"
+            }
+          ]
+        },
+        "includeOtherFields": true,
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.5,
+      "position": [
+        448,
+        16
+      ],
+      "id": "5ffc8322-b309-4042-8a0a-a2580115ee3e",
+      "name": "Lead Context"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=(They have not replied. Write follow-up message number {{ $json.followup_count + 1 }}.)",
+        "options": {
+          "systemMessage": "=You are {{ $json.sender_name }} from {{ $json.business_name }}, sending a short follow-up text to a lead who has not replied.\n\nLEAD CONTEXT\n- First name: {{ $json.first_name }}\n- Interested in: {{ $json.service_interest }}\n- Your last message to them was: {{ $json.last_message }}\n- Approach for this lead: {{ $json.angle }}\n- This is follow-up {{ $json.followup_count + 1 }} of {{ $json.max_followups }}.\n\nRULES\n- One short text, 1 or 2 sentences. Warm, human, never pushy or guilt-tripping.\n- Do NOT repeat your last message. Take a fresh angle: a helpful tip, a simple question, or an easier next step.\n- If this is the final follow-up, say it's your last note and the door is open whenever they're ready.\n- No prices, discounts, links, or medical claims.\n- Output only the message text."
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 3.1,
+      "position": [
+        672,
+        16
+      ],
+      "id": "2fc4630d-f4c0-4e39-9316-ab9a0a501de0",
+      "name": "Write Follow-up"
+    },
+    {
+      "parameters": {
+        "modelName": "models/gemini-3.5-flash",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1.2,
+      "position": [
+        688,
+        256
+      ],
+      "id": "6a2000e7-4aac-45ce-add4-41e16897935e",
+      "name": "Google Gemini Chat Model",
+      "credentials": {
+        "googlePalmApi": {
+          "id": null,
+          "name": "",
+          "__aiGatewayManaged": true
+        }
+      }
+    },
+    {
+      "parameters": {
+        "sessionIdType": "customKey",
+        "sessionKey": "={{ $json.sessionId }}",
+        "contextWindowLength": 10
+      },
+      "type": "@n8n/n8n-nodes-langchain.memoryPostgresChat",
+      "typeVersion": 1.4,
+      "position": [
+        816,
+        256
+      ],
+      "id": "083004da-5662-4c2f-8526-115f8742edb5",
+      "name": "Postgres Chat Memory",
+      "credentials": {
+        "postgres": {
+          "id": "XMsiI3y2vZcn0CdC",
+          "name": "Supabase DBR"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "WITH m AS (\n  INSERT INTO messages (lead_id, channel, direction, body, ai_generated)\n  VALUES ($1::uuid, $3::text, 'outbound', $2::text, true)\n  RETURNING id\n), e AS (\n  INSERT INTO lead_events (lead_id, event_type, payload)\n  VALUES ($1::uuid, 'followup_sent', jsonb_build_object('followup_number', $5::int + 1))\n  RETURNING id\n)\nUPDATE leads\nSET followup_count = followup_count + 1,\n    last_outbound_at = now(),\n    next_action_at = now() + make_interval(days => coalesce(\n        (SELECT followup_days[$5::int + 2] FROM segment_playbook WHERE segment = $4::text), 5)),\n    updated_at = now()\nWHERE id = $1::uuid\nRETURNING id, $2::text AS followup, followup_count;",
+        "options": {
+          "queryReplacement": "={{ [ $('Lead Context').item.json.lead_id, $json.output, $('Lead Context').item.json.channel, $('Lead Context').item.json.segment, $('Lead Context').item.json.followup_count ] }}"
+        }
+      },
+      "type": "n8n-nodes-base.postgres",
+      "typeVersion": 2.7,
+      "position": [
+        1024,
+        16
+      ],
+      "id": "93eefce6-b731-4882-8963-f1aa672370de",
+      "name": "Execute a SQL query",
+      "credentials": {
+        "postgres": {
+          "id": "XMsiI3y2vZcn0CdC",
+          "name": "Supabase DBR"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "node": "Find Due Follow-up",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Mark Cold",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Find Due Follow-up": {
+      "main": [
+        [
+          {
+            "node": "Lead Context",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Schedule Trigger": {
+      "main": [
+        [
+          {
+            "node": "Find Due Follow-up",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Mark Cold",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Lead Context": {
+      "main": [
+        [
+          {
+            "node": "Write Follow-up",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Gemini Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Write Follow-up",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Postgres Chat Memory": {
+      "ai_memory": [
+        [
+          {
+            "node": "Write Follow-up",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Write Follow-up": {
+      "main": [
+        [
+          {
+            "node": "Execute a SQL query",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "versionId": "d7765fea-1a32-4851-a4ce-0342dd0015e3",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "2fcaeefb1bd68d9c1e5e0cd34be9ca80409640ea3c353936fb76e8ed63fc66ec"
+  },
+  "nodeGroups": [],
+  "id": "EngINOok6eGu1vCD",
+  "tags": []
+}

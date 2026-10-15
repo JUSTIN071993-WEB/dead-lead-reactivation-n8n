@@ -1,0 +1,323 @@
+{
+  "name": "DBR - 4 Simulator API",
+  "nodes": [
+    {
+      "parameters": {
+        "path": "dbr-leads",
+        "responseMode": "responseNode",
+        "options": {
+          "allowedOrigins": "*"
+        }
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.2,
+      "position": [
+        0,
+        -112
+      ],
+      "id": "e12cbd45-fc21-4490-9c58-eb46b0339252",
+      "name": "Leads",
+      "webhookId": "2805140d-3ce8-42fd-9347-1e7b3d38e6bc"
+    },
+    {
+      "parameters": {
+        "respondWith": "allIncomingItems",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.5,
+      "position": [
+        448,
+        -112
+      ],
+      "id": "742eabd1-2b0b-4906-b452-b58745dc3e8b",
+      "name": "Respond to Webhook"
+    },
+    {
+      "parameters": {
+        "path": "dbr-thread",
+        "responseMode": "responseNode",
+        "options": {
+          "allowedOrigins": "*"
+        }
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.2,
+      "position": [
+        0,
+        112
+      ],
+      "id": "dc3ae03e-40f7-4101-b03f-97874cc7a8b8",
+      "name": "Thread",
+      "webhookId": "ed94350f-e54d-4421-be47-ded000718b27"
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "SELECT json_build_object(\n  'lead', (SELECT row_to_json(x) FROM (\n     SELECT id, first_name, last_name, segment, service_interest, status, ai_paused\n     FROM leads WHERE id = $1::uuid AND is_demo) x),\n  'messages', coalesce((SELECT json_agg(m ORDER BY m.created_at) FROM (\n     SELECT direction, body, created_at FROM messages WHERE lead_id = $1::uuid) m), '[]'::json),\n  'booking', (SELECT row_to_json(b) FROM (\n     SELECT starts_at, status FROM bookings\n     WHERE lead_id = $1::uuid AND status = 'scheduled'\n     ORDER BY created_at DESC LIMIT 1) b)\n) AS result;",
+        "options": {
+          "queryReplacement": "={{ [ $('Thread').item.json.query.lead_id ] }}"
+        }
+      },
+      "type": "n8n-nodes-base.postgres",
+      "typeVersion": 2.7,
+      "position": [
+        224,
+        112
+      ],
+      "id": "e29c21b0-4904-4037-a453-a0d32f1d6646",
+      "name": "Get Thread",
+      "credentials": {
+        "postgres": {
+          "id": "XMsiI3y2vZcn0CdC",
+          "name": "Supabase DBR"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.5,
+      "position": [
+        448,
+        112
+      ],
+      "id": "5e2fdeba-da6b-41b3-84d9-fae7e57e6d15",
+      "name": "Respond to Webhook1"
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "SELECT id, first_name, last_name, segment, service_interest, status\nFROM leads WHERE is_demo\nORDER BY segment, first_name;",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.postgres",
+      "typeVersion": 2.7,
+      "position": [
+        224,
+        -112
+      ],
+      "id": "a0bcbf6b-e943-47fa-8e2e-32cf5d1102a0",
+      "name": "List Demo Leads",
+      "credentials": {
+        "postgres": {
+          "id": "XMsiI3y2vZcn0CdC",
+          "name": "Supabase DBR"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "dbr-reset",
+        "responseMode": "responseNode",
+        "options": {
+          "allowedOrigins": "*"
+        }
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.2,
+      "position": [
+        0,
+        336
+      ],
+      "id": "ed97c8b7-7330-4480-8af0-de8481f34a3b",
+      "name": "Reset",
+      "webhookId": "013cd1ad-75b0-4519-8d90-d4150082e1bb"
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "WITH a AS (DELETE FROM n8n_chat_histories WHERE session_id = $1::text),\n     b AS (DELETE FROM messages WHERE lead_id = $1::uuid),\n     c AS (DELETE FROM bookings WHERE lead_id = $1::uuid),\n     d AS (DELETE FROM lead_events WHERE lead_id = $1::uuid\n           AND event_type IN ('opener_sent','followup_sent','booked','opted_out','blocked_false_booking','marked_cold'))\nUPDATE leads\nSET status = 'segmented', opted_out = false, opted_out_at = NULL, ai_paused = false,\n    followup_count = 0, last_inbound_at = NULL, last_outbound_at = NULL,\n    next_action_at = NULL, updated_at = now()\nWHERE id = $1::uuid AND is_demo\nRETURNING id, status;",
+        "options": {
+          "queryReplacement": "={{ [ $('Reset').item.json.body.lead_id ] }}"
+        }
+      },
+      "type": "n8n-nodes-base.postgres",
+      "typeVersion": 2.7,
+      "position": [
+        224,
+        336
+      ],
+      "id": "e963b83a-4c97-4276-82d1-4be9da44c358",
+      "name": "Reset Demo Lead",
+      "credentials": {
+        "postgres": {
+          "id": "XMsiI3y2vZcn0CdC",
+          "name": "Supabase DBR"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.5,
+      "position": [
+        448,
+        336
+      ],
+      "id": "859a8b1d-dc19-4dc2-94b2-aa58c3575b07",
+      "name": "Respond to Webhook2"
+    },
+    {
+      "parameters": {
+        "path": "dbr-stats",
+        "responseMode": "responseNode",
+        "options": {
+          "allowedOrigins": "*"
+        }
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.2,
+      "position": [
+        0,
+        560
+      ],
+      "id": "d0dd9d5e-38f3-4411-8a28-16b98b8b1db1",
+      "name": "Stats",
+      "webhookId": "4d950606-ab1d-4891-9484-2f08b9fc268d"
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "SELECT json_build_object(\n  'kpis', (SELECT json_build_object(\n      'eligible',  count(*) FILTER (WHERE segment IS NOT NULL),\n      'contacted', count(*) FILTER (WHERE segment IS NOT NULL AND last_outbound_at IS NOT NULL),\n      'replied',   count(*) FILTER (WHERE segment IS NOT NULL AND last_inbound_at IS NOT NULL AND status <> 'opted_out'),\n      'booked',    count(*) FILTER (WHERE segment IS NOT NULL AND status = 'booked'),\n      'opted_out', count(*) FILTER (WHERE segment IS NOT NULL AND status = 'opted_out'),\n      'pipeline',  coalesce(sum(est_value) FILTER (WHERE segment IS NOT NULL AND status = 'booked'), 0),\n      'texts_sent', (SELECT count(*) FROM lead_events WHERE event_type IN ('opener_sent','followup_sent'))\n    ) FROM leads),\n  'segments', (SELECT coalesce(json_agg(s ORDER BY s.leads DESC), '[]'::json) FROM (\n      SELECT segment,\n             count(*) AS leads,\n             count(*) FILTER (WHERE last_outbound_at IS NOT NULL) AS contacted,\n             count(*) FILTER (WHERE last_inbound_at IS NOT NULL AND status <> 'opted_out') AS replied,\n             count(*) FILTER (WHERE status = 'booked') AS booked,\n             coalesce(sum(est_value) FILTER (WHERE status = 'booked'), 0) AS pipeline\n      FROM leads WHERE segment IS NOT NULL GROUP BY segment) s),\n  'daily', (SELECT json_agg(d ORDER BY d.day) FROM (\n      SELECT g.day::date AS day,\n             (SELECT count(*) FROM lead_events e WHERE e.event_type IN ('opener_sent','followup_sent') AND e.created_at::date = g.day::date) AS texts,\n             (SELECT count(*) FROM leads l WHERE l.segment IS NOT NULL AND l.status <> 'opted_out' AND l.last_inbound_at::date = g.day::date) AS replies,\n             (SELECT count(*) FROM lead_events e WHERE e.event_type = 'booked' AND e.created_at::date = g.day::date) AS bookings\n      FROM generate_series(current_date - 13, current_date, interval '1 day') AS g(day)) d),\n  'recent', (SELECT coalesce(json_agg(r), '[]'::json) FROM (\n      SELECT e.event_type, l.first_name, l.segment, e.created_at\n      FROM lead_events e JOIN leads l ON l.id = e.lead_id\n      WHERE e.event_type IN ('opener_sent','followup_sent','booked','opted_out','marked_cold')\n      ORDER BY e.created_at DESC LIMIT 8) r)\n) AS result;",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.postgres",
+      "typeVersion": 2.7,
+      "position": [
+        224,
+        560
+      ],
+      "id": "d0c02d8b-c0e5-422a-bbe2-d2ea31b043bd",
+      "name": "Get Stats",
+      "credentials": {
+        "postgres": {
+          "id": "XMsiI3y2vZcn0CdC",
+          "name": "Supabase DBR"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.5,
+      "position": [
+        448,
+        560
+      ],
+      "id": "a7f34b91-3be8-4a93-9384-42d1b68f8ad6",
+      "name": "Respond to Webhook3"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Leads": {
+      "main": [
+        [
+          {
+            "node": "List Demo Leads",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Thread": {
+      "main": [
+        [
+          {
+            "node": "Get Thread",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Thread": {
+      "main": [
+        [
+          {
+            "node": "Respond to Webhook1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "List Demo Leads": {
+      "main": [
+        [
+          {
+            "node": "Respond to Webhook",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Reset": {
+      "main": [
+        [
+          {
+            "node": "Reset Demo Lead",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Reset Demo Lead": {
+      "main": [
+        [
+          {
+            "node": "Respond to Webhook2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Stats": {
+      "main": [
+        [
+          {
+            "node": "Get Stats",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Stats": {
+      "main": [
+        [
+          {
+            "node": "Respond to Webhook3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "versionId": "72d9e02d-6b9e-42be-9cc8-0d50c760797d",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "2fcaeefb1bd68d9c1e5e0cd34be9ca80409640ea3c353936fb76e8ed63fc66ec"
+  },
+  "nodeGroups": [],
+  "id": "HGWdx63XjMEOzbPw",
+  "tags": []
+}

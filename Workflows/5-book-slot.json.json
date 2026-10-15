@@ -1,0 +1,259 @@
+{
+  "name": "DBR - Tool: Book Slot",
+  "nodes": [
+    {
+      "parameters": {
+        "workflowInputs": {
+          "values": [
+            {
+              "name": "lead_id"
+            },
+            {
+              "name": "starts_at"
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.executeWorkflowTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        -816,
+        320
+      ],
+      "id": "2bb1ef43-2d7c-49b8-8038-d2f57abc21b4",
+      "name": "Trigger"
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "SELECT l.first_name, l.last_name, l.service_interest,\n       NOT EXISTS (\n         SELECT 1 FROM bookings b\n         WHERE b.status = 'scheduled' AND b.starts_at = $2::timestamptz\n       ) AS slot_free\nFROM leads l\nWHERE l.id = $1::uuid;",
+        "options": {
+          "queryReplacement": "={{ [ $('Trigger').item.json.lead_id, $('Trigger').item.json.starts_at ] }}"
+        }
+      },
+      "type": "n8n-nodes-base.postgres",
+      "typeVersion": 2.7,
+      "position": [
+        -576,
+        320
+      ],
+      "id": "ae26896b-24d8-437f-8d9a-1a08cc258a31",
+      "name": "Check Slot",
+      "credentials": {
+        "postgres": {
+          "id": "XMsiI3y2vZcn0CdC",
+          "name": "Supabase DBR"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 3
+          },
+          "conditions": [
+            {
+              "id": "f7223c24-bacd-490e-adcb-aec51309174e",
+              "leftValue": "={{ $json.slot_free }}",
+              "rightValue": "",
+              "operator": {
+                "type": "boolean",
+                "operation": "true",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3,
+      "position": [
+        -368,
+        320
+      ],
+      "id": "2f401c92-3d91-463d-b2ba-53604a2e7cb5",
+      "name": "Slot Free?"
+    },
+    {
+      "parameters": {
+        "calendar": {
+          "__rl": true,
+          "value": "018170d6f0b1e318e5120cc45b4f4479597a556bb35001ca4545d2d76669e0ce@group.calendar.google.com",
+          "mode": "list",
+          "cachedResultName": "Glow Clinic - Consultations"
+        },
+        "start": "={{ $('Trigger').item.json.starts_at }}",
+        "end": "={{ DateTime.fromISO($('Trigger').item.json.starts_at).plus({ minutes: 30 }).toISO() }}",
+        "additionalFields": {
+          "summary": "=Consultation: {{ $('Check Slot').item.json.first_name }} {{ $('Check Slot').item.json.last_name }} ({{ $('Check Slot').item.json.service_interest }})"
+        }
+      },
+      "type": "n8n-nodes-base.googleCalendar",
+      "typeVersion": 1.3,
+      "position": [
+        -128,
+        240
+      ],
+      "id": "f860efeb-dfcc-47b7-ba20-8a3ea130ec7c",
+      "name": "Create Event",
+      "credentials": {
+        "googleCalendarOAuth2Api": {
+          "id": "0Y0ML2wBgVqaC6NH",
+          "name": "Google Calendar account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "WITH b AS (\n  INSERT INTO bookings (lead_id, rep_name, starts_at, calendar_event)\n  VALUES ($1::uuid, 'Sales Team', $2::timestamptz, $3)\n  RETURNING id\n), e AS (\n  INSERT INTO lead_events (lead_id, event_type, payload)\n  VALUES ($1::uuid, 'booked', jsonb_build_object('starts_at', $2::text))\n  RETURNING id\n)\nUPDATE leads\nSET status = 'booked', updated_at = now()\nWHERE id = $1::uuid\nRETURNING id;",
+        "options": {
+          "queryReplacement": "={{ [ $('Trigger').item.json.lead_id, $('Trigger').item.json.starts_at, $('Create Event').item.json.id ] }}"
+        }
+      },
+      "type": "n8n-nodes-base.postgres",
+      "typeVersion": 2.7,
+      "position": [
+        80,
+        240
+      ],
+      "id": "c6186c5a-6f01-49b2-995b-77ed000df0e4",
+      "name": "Save Booking",
+      "credentials": {
+        "postgres": {
+          "id": "XMsiI3y2vZcn0CdC",
+          "name": "Supabase DBR"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "3ea4a474-7cf2-45bb-aed3-963bea3489d6",
+              "name": "result",
+              "value": "={{ \"Booked successfully for \" + DateTime.fromISO($('Trigger').item.json.starts_at).setZone('America/New_York').toFormat(\"cccc, LLLL d 'at' h:mm a\") + \" Eastern Time.\" }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.5,
+      "position": [
+        304,
+        240
+      ],
+      "id": "50f9ee04-6355-42c2-9324-a37b6f2ffb89",
+      "name": "Return Booked"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "c66c3fe0-d0f8-4388-8833-f3cdf2b7155c",
+              "name": "Return Taken",
+              "value": "That time was just taken. Use Get Free Slots again and offer the lead new options.",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.5,
+      "position": [
+        -144,
+        496
+      ],
+      "id": "087abc20-d399-480a-a05b-192ba8dbcf7b",
+      "name": "Edit Fields"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Trigger": {
+      "main": [
+        [
+          {
+            "node": "Check Slot",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Check Slot": {
+      "main": [
+        [
+          {
+            "node": "Slot Free?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Slot Free?": {
+      "main": [
+        [
+          {
+            "node": "Create Event",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Create Event": {
+      "main": [
+        [
+          {
+            "node": "Save Booking",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Save Booking": {
+      "main": [
+        [
+          {
+            "node": "Return Booked",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "versionId": "8e0d3d2b-7789-44d5-af5c-159f861be545",
+  "meta": {
+    "instanceId": "2fcaeefb1bd68d9c1e5e0cd34be9ca80409640ea3c353936fb76e8ed63fc66ec"
+  },
+  "nodeGroups": [],
+  "id": "u9TbsVcfJTxJbg8e",
+  "tags": []
+}

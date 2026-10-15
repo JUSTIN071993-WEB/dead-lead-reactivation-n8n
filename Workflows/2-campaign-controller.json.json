@@ -1,0 +1,319 @@
+{
+  "name": "DBR - 2 Campaign Controller",
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        32
+      ],
+      "id": "e8356e25-91be-434d-a9b9-c25c75446a85",
+      "name": "When clicking ‘Execute workflow’"
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "SELECT * FROM claim_next_batch();",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.postgres",
+      "typeVersion": 2.7,
+      "position": [
+        224,
+        128
+      ],
+      "id": "56b722d3-7cd9-4d9b-b0a3-12d3deebd629",
+      "name": "Claim Batch",
+      "credentials": {
+        "postgres": {
+          "id": "XMsiI3y2vZcn0CdC",
+          "name": "Supabase DBR"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=(Start the conversation: write your first text message to this lead.)",
+        "options": {
+          "systemMessage": "=You are {{ $json.sender_name }}, a friendly team member at {{ $json.business_name }}, sending the FIRST text message to a past lead who went quiet.\n\nLEAD CONTEXT\n- First name: {{ $json.first_name }}\n- Was interested in: {{ $json.service_interest }}\n- Where things left off: {{ $json.last_stage }} {{ $json.lost_reason || '' }}\n- Approach for this lead: {{ $json.angle }}\n\nRULES\n- Write ONE text message of 2 short sentences at most. Casual and warm, like a real person.\n- Write exactly 2 short sentences. No more.\n- Use their first name and mention the service naturally.\n- End with one soft, easy question. No links, no prices, no discounts, no medical claims.\n- Do not mention that you are an AI or that this is a campaign.\n- Output only the message text, nothing else."
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 3.1,
+      "position": [
+        672,
+        32
+      ],
+      "id": "d19d04b3-5737-4fb4-815d-6e111dcfbcc1",
+      "name": "Write Opener"
+    },
+    {
+      "parameters": {
+        "modelName": "models/gemini-3.5-flash",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1.2,
+      "position": [
+        688,
+        272
+      ],
+      "id": "a86c3c87-cb04-4a0b-9691-450a26fe3284",
+      "name": "Google Gemini Chat Model",
+      "credentials": {
+        "googlePalmApi": {
+          "id": null,
+          "name": "",
+          "__aiGatewayManaged": true
+        }
+      }
+    },
+    {
+      "parameters": {
+        "sessionIdType": "=customKey",
+        "sessionKey": "={{ $json.sessionId }}",
+        "contextWindowLength": 10
+      },
+      "type": "@n8n/n8n-nodes-langchain.memoryPostgresChat",
+      "typeVersion": 1.4,
+      "position": [
+        816,
+        272
+      ],
+      "id": "1cf22aae-bb5b-4c82-8d98-716ee7696a2f",
+      "name": "Postgres Chat Memory",
+      "credentials": {
+        "postgres": {
+          "id": "XMsiI3y2vZcn0CdC",
+          "name": "Supabase DBR"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "WITH m AS (\n  INSERT INTO messages (lead_id, channel, direction, body, ai_generated)\n  VALUES ($1::uuid, $3::text, 'outbound', $2::text, true)\n  RETURNING id\n), e AS (\n  INSERT INTO lead_events (lead_id, event_type, payload)\n  VALUES ($1::uuid, 'opener_sent', jsonb_build_object('segment', $4::text))\n  RETURNING id\n)\nUPDATE leads\nSET status = 'contacted',\n    last_outbound_at = now(),\n    followup_count = 0,\n    next_action_at = now() + make_interval(days => (SELECT followup_days[1] FROM segment_playbook WHERE segment = $4::text)),\n    updated_at = now()\nWHERE id = $1::uuid\nRETURNING id, $2::text AS opener;",
+        "options": {
+          "queryReplacement": "={{ [ $('Lead Context').item.json.lead_id, $json.output.replace(/```(json|text)?/gi, '').trim() + \"\\n\\nReply STOP to opt out.\", $('Lead Context').item.json.channel, $('Lead Context').item.json.segment ] }}"
+        }
+      },
+      "type": "n8n-nodes-base.postgres",
+      "typeVersion": 2.7,
+      "position": [
+        1024,
+        32
+      ],
+      "id": "fe0bb483-7c5b-44ec-acfc-f1389ba2b53f",
+      "name": "Save Opener",
+      "credentials": {
+        "postgres": {
+          "id": "XMsiI3y2vZcn0CdC",
+          "name": "Supabase DBR"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "ff3b23c2-eb24-46ad-828f-2822eadfc241",
+              "name": "sessionId",
+              "value": "={{ $json.lead_id }}",
+              "type": "string"
+            }
+          ]
+        },
+        "includeOtherFields": true,
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.5,
+      "position": [
+        448,
+        32
+      ],
+      "id": "444590d2-6999-465c-ad3a-fa4015da1f5f",
+      "name": "Lead Context"
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "minutes"
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.4,
+      "position": [
+        0,
+        224
+      ],
+      "id": "97a80c12-3969-4c30-bd76-0bdf0e8e15e8",
+      "name": "Schedule Trigger",
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "dbr-start",
+        "options": {
+          "allowedOrigins": "*"
+        }
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.2,
+      "position": [
+        0,
+        -160
+      ],
+      "id": "a2baf655-082c-4b69-946e-9491512458d8",
+      "name": "Start Demo Lead",
+      "webhookId": "23894dc9-6020-4996-81a9-ebf9ad534822"
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "UPDATE leads\nSET status = 'queued', updated_at = now()\nWHERE id = $1::uuid AND is_demo AND status = 'segmented'\nRETURNING id AS lead_id, first_name, segment, service_interest, last_stage, lost_reason,\n          channel_pref AS channel, phone, email,\n          (SELECT angle FROM segment_playbook p WHERE p.segment = leads.segment) AS angle,\n          (SELECT business_name FROM campaign_settings WHERE id = 1) AS business_name,\n          (SELECT sender_name FROM campaign_settings WHERE id = 1) AS sender_name;",
+        "options": {
+          "queryReplacement": "={{ [ $('Start Demo Lead').item.json.body.lead_id ] }}"
+        }
+      },
+      "type": "n8n-nodes-base.postgres",
+      "typeVersion": 2.7,
+      "position": [
+        224,
+        -160
+      ],
+      "id": "1f43c476-a7ea-411f-bccd-b487cd726f23",
+      "name": "Claim Demo Lead",
+      "credentials": {
+        "postgres": {
+          "id": "XMsiI3y2vZcn0CdC",
+          "name": "Supabase DBR"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "node": "Claim Batch",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Claim Batch": {
+      "main": [
+        [
+          {
+            "node": "Lead Context",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Gemini Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Write Opener",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Postgres Chat Memory": {
+      "ai_memory": [
+        [
+          {
+            "node": "Write Opener",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Write Opener": {
+      "main": [
+        [
+          {
+            "node": "Save Opener",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Lead Context": {
+      "main": [
+        [
+          {
+            "node": "Write Opener",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Schedule Trigger": {
+      "main": [
+        [
+          {
+            "node": "Claim Batch",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Start Demo Lead": {
+      "main": [
+        [
+          {
+            "node": "Claim Demo Lead",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Claim Demo Lead": {
+      "main": [
+        [
+          {
+            "node": "Lead Context",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "versionId": "a58d3441-7a82-4593-a731-62207b3e4a8a",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "2fcaeefb1bd68d9c1e5e0cd34be9ca80409640ea3c353936fb76e8ed63fc66ec"
+  },
+  "nodeGroups": [],
+  "id": "3z14uGtkx5zywgqB",
+  "tags": []
+}
