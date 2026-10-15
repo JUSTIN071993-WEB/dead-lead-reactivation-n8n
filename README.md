@@ -6,8 +6,7 @@ Demo business: *Glow Aesthetics Clinic* (fictional). All data is fake.
 
 **Live demos**
 - Results dashboard: https://glow-aesthetic-clinicdashboard.netlify.app
-- Chat demo (pick a lead, watch the AI text first, reply as the lead): ADD YOUR CHAT DEMO LINK HERE
-- Short walkthrough video: ADD YOUR LOOM LINK HERE
+- Chat demo (pick a lead, watch the AI text first, reply as the lead): https://glow-aesthetics-clinicdemo.netlify.app/
 
 ## The problem
 
