@@ -43,13 +43,14 @@ I generated two weeks of sample campaign activity across the 432 reachable leads
 | Measure | Sample result |
 |---|---|
 | Dormant leads in the campaign | 432 |
-| Leads texted | 344 |
-| Replied | 74 (about 21% of those texted) |
+| Leads texted | 361 |
+| Texts sent, including follow-ups | 685 |
+| Replied | 75 (about 21% of those texted) |
 | Consultations booked | 31 (about 9% of those texted) |
-| Booked treatment value | about $35,700 |
-| Opted out | about 1.5% of those texted |
+| Booked treatment value | about $45,800 |
+| Opted out | about 2% of those texted |
 
-Reply rates varied by lead type in the sample: leads who missed a consultation or went quiet after a quote responded most, and year-old inquiries responded least.
+Reply rates varied by lead type in the sample. Leads who missed a consultation replied most (about 41%), followed by leads who never got a follow-up (about 29%). Year-old inquiries replied least (about 6%). These differences come from the assumptions behind the simulation, so treat them as illustrative.
 
 ## What I would do next on a real engagement
 
