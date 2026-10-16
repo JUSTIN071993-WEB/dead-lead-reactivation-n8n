@@ -1,12 +1,13 @@
 # Dead Lead Reactivation: AI conversations that win back a dormant database
 
-An n8n system that goes through an old clinic database, sorts the leads into segments, and starts a **personalized two-way text conversation** with each one. An AI assistant answers questions, handles objections, and **books consultations on the sales team's calendar**. It is not a blast: every lead gets its own message, and replies are handled one conversation at a time.
+An n8n system that goes through an old clinic database, sorts the leads into segments, and starts a **personalized two-way text conversation** with each one. An AI assistant answers questions, handles objections and **books consultations on the sales team's calendar**. It is not a blast, every lead gets its own message and replies are handled one conversation at a time.
 
 Demo business: *Glow Aesthetics Clinic* (fictional). All data is fake.
 
 **Live demos**
 - Results dashboard: https://glow-aesthetic-clinicdashboard.netlify.app
 - Chat demo (pick a lead, watch the AI text first, reply as the lead): https://glow-aesthetics-clinicdemo.netlify.app/
+- Case study: [Read the write-up](docs/case-study.md)
 
 ## The problem
 
